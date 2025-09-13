@@ -1,16 +1,41 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<meta charset="UTF-8">
-<title>GHXST PC Builds</title>
-<link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GHXST Builds</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<h1>GHXST PC Builds & Professional Systems</h1>
-<div class="buttons">
-  <button onclick="location.href='simple.html'">Simple Builds</button>
-  <button onclick="location.href='advanced.html'">Advanced Builds</button>
-  <button onclick="location.href='custom.html'">Custom Builds</button>
-</div>
+  <header>
+    <div class="top-left">
+      <a href="https://discord.gg/yourserver" target="_blank" class="discord-btn">
+        <img src="assets/discord.svg" alt="Discord">
+      </a>
+      <button id="theme-toggle">
+        <img id="theme-icon" src="assets/sun.svg" alt="Toggle Theme">
+      </button>
+    </div>
+    <h1>GHXST Builds</h1>
+  </header>
+
+  <main>
+    <div class="mode-buttons">
+      <a href="simple.html" class="mode-btn">
+        <h2>Simple</h2>
+        <p>Pick a preconfigured PC per tier. Fast and easy.</p>
+      </a>
+      <a href="advanced.html" class="mode-btn">
+        <h2>Advanced</h2>
+        <p>Choose from all PCs per tier. Optional parts get extra checkboxes.</p>
+      </a>
+      <a href="custom.html" class="mode-btn">
+        <h2>Custom</h2>
+        <p>Fully modular. Select exactly what you want.</p>
+      </a>
+    </div>
+  </main>
+
+  <script src="script.js"></script>
 </body>
 </html>
