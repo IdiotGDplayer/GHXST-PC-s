@@ -1,82 +1,104 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>GHXST Simple Builds</title>
-<link rel="stylesheet" href="style.css">
-</head>
-<body>
-<h1>GHXST Simple Builds</h1>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg-light: #f5f5f5;
+    --bg-dark: #121212;
+    --card-light: #ffffff;
+    --card-dark: #1e1e1e;
+    --text-light: #000;
+    --text-dark: #f5f5f5;
+    --accent: #4f46e5;
+  }
 
-<table>
-<tr><th>Select</th><th>Tier Name</th><th>CPU / Motherboard / GPU / RAM / Storage / PSU / Cooling / Case</th></tr>
+  body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--bg-light);
+    color: var(--text-light);
+    transition: background-color 0.3s, color 0.3s;
+  }
 
-<tr>
-<td><input type="checkbox" data-build="AeroLite / Intel Pentium Gold G7400 / ASUS Prime H610M / Intel UHD 710 / 8GB DDR4 / 256GB SSD / 400W Bronze / Stock Cooler / Mini Tower"></td>
-<td>AeroLite</td>
-<td>Intel Pentium Gold G7400 / ASUS Prime H610M / Intel UHD 710 / 8GB DDR4 / 256GB SSD / 400W Bronze / Stock Cooler / Mini Tower</td>
-</tr>
+  .dark-mode {
+    background-color: var(--bg-dark);
+    color: var(--text-dark);
+  }
 
-<tr>
-<td><input type="checkbox" data-build="NovaCore / Intel Core i3-12100 / MSI B660M / GTX 1050 / 8GB DDR4 / 512GB SSD / 450W Bronze / Stock or small air cooler / Mini Tower"></td>
-<td>NovaCore</td>
-<td>Intel Core i3-12100 / MSI B660M / GTX 1050 / 8GB DDR4 / 512GB SSD / 450W Bronze / Stock or small air cooler / Mini Tower</td>
-</tr>
+  header {
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+    background-color: var(--card-light);
+    justify-content: space-between;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  }
 
-<tr>
-<td><input type="checkbox" data-build="Striker / Intel Core i5-12400 / MSI B660 / GTX 1660 / 16GB DDR4 / 1TB SSD / 500W Bronze / Small Air Cooler / Mid Tower"></td>
-<td>Striker</td>
-<td>Intel Core i5-12400 / MSI B660 / GTX 1660 / 16GB DDR4 / 1TB SSD / 500W Bronze / Small Air Cooler / Mid Tower</td>
-</tr>
+  .dark-mode header {
+    background-color: var(--card-dark);
+  }
 
-<tr>
-<td><input type="checkbox" data-build="Phantom / Intel Core i5-13600K / ASUS TUF Z690 / RTX 2060 / 16-32GB DDR4 / 1TB SSD + 1TB HDD / 600W Gold / Air Cooler / Mid Tower"></td>
-<td>Phantom</td>
-<td>Intel Core i5-13600K / ASUS TUF Z690 / RTX 2060 / 16-32GB DDR4 / 1TB SSD + 1TB HDD / 600W Gold / Air Cooler / Mid Tower</td>
-</tr>
+  .discord-btn {
+    background-color: #7289da;
+    color: white;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+    text-decoration: none;
+  }
 
-<tr>
-<td><input type="checkbox" data-build="Titan / Intel Core i7-13700KF / ASUS ROG Strix Z790 / RTX 3060 / 32GB DDR5 / 2TB SSD / 650W Gold / Air / AIO 240mm / Mid / Large Tower"></td>
-<td>Titan</td>
-<td>Intel Core i7-13700KF / ASUS ROG Strix Z790 / RTX 3060 / 32GB DDR5 / 2TB SSD / 650W Gold / Air / AIO 240mm / Mid / Large Tower</td>
-</tr>
+  .theme-toggle {
+    margin-left: 1rem;
+    cursor: pointer;
+    font-size: 1.2rem;
+  }
 
-<tr>
-<td><input type="checkbox" data-build="Vanguard / Intel Core i7-14700K / ASUS ROG Strix Z790 / RTX 3070 / 32-64GB DDR5 / 2TB SSD + 2TB HDD / 750W Gold / AIO 240-280mm / Large Tower"></td>
-<td>Vanguard</td>
-<td>Intel Core i7-14700K / ASUS ROG Strix Z790 / RTX 3070 / 32-64GB DDR5 / 2TB SSD + 2TB HDD / 750W Gold / AIO 240-280mm / Large Tower</td>
-</tr>
+  main {
+    padding: 1rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1rem;
+  }
 
-<tr>
-<td><input type="checkbox" data-build="Predator X / Intel Core i9-14900KF / ASUS ROG Maximus Z790 / RTX 4080 / 64GB DDR5 / 4TB SSD / 850W Platinum / AIO 360mm / Full Tower"></td>
-<td>Predator X</td>
-<td>Intel Core i9-14900KF / ASUS ROG Maximus Z790 / RTX 4080 / 64GB DDR5 / 4TB SSD / 850W Platinum / AIO 360mm / Full Tower</td>
-</tr>
+  .tier-card {
+    background-color: var(--card-light);
+    border-radius: 12px;
+    padding: 1rem;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    transition: background-color 0.3s, color 0.3s;
+  }
 
-<tr>
-<td><input type="checkbox" data-build="Legion Z / Intel Core i9-14900K / ASUS ROG Maximus Z790 / RTX 4090 / 128GB DDR5 / 4TB SSD + 2TB HDD / 1000W Platinum / Custom Loop / Super Tower"></td>
-<td>Legion Z</td>
-<td>Intel Core i9-14900K / ASUS ROG Maximus Z790 / RTX 4090 / 128GB DDR5 / 4TB SSD + 2TB HDD / 1000W Platinum / Custom Loop / Super Tower</td>
-</tr>
+  .dark-mode .tier-card {
+    background-color: var(--card-dark);
+  }
 
-<tr>
-<td><input type="checkbox" data-build="Dominion RX / Intel Core i9-14900K / ASUS ROG Maximus Z790 / Dual RTX 4090 / 256GB DDR5 / 8TB SSD / 1500W Platinum / Custom Loop / Super Tower"></td>
-<td>Dominion</td>
-<td>Intel Core i9-14900K / ASUS ROG Maximus Z790 / RTX 4090 / 256GB DDR5 / 8TB SSD / 1300W Platinum / Custom Loop / Super Tower</td>
-</tr>
+  .tier-card h2 {
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+    color: var(--accent);
+  }
 
-<tr>
-<td><input type="checkbox" data-build="Apex Nova / Intel Core i9-14900K / ASUS ROG Maximus Z790 / Quad RTX 4090 / 512GB DDR5 / 16TB SSD + 8TB HDD / 2500W Platinum / Full Custom Loop / Super Tower"></td>
-<td>Dominion RX</td>
-<td>Intel Core i9-14900K / ASUS ROG Maximus Z790 / RTX 4090 / 512GB DDR5 / 16TB SSD + 8TB HDD / 1300W Platinum / Full Custom Loop / Super Tower</td>
-</tr>
+  .tier-card ul {
+    list-style: none;
+    padding-left: 0;
+  }
 
-</table>
+  .tier-card ul li {
+    margin-bottom: 0.25rem;
+  }
 
-<h3>Selected Builds:</h3>
-<div id="summary"></div>
+  .tier-select {
+    margin-top: 0.5rem;
+  }
 
-<button onclick="sendToDiscord()">Send Selected to Discord</button>
-<script src="script.js"></script>
-</body>
-</html>
+  .category {
+    grid-column: 1/-1;
+    font-size: 1.5rem;
+    font-weight: bold;
+    margi
