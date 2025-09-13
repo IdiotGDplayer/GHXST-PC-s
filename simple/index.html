@@ -92,35 +92,14 @@
   </div>
 
   <button class="back-button" onclick="location.href='../index.html'">← Back to Main Page</button>
-<!-- Light/Dark Mode Toggle Button -->
-<button id="theme-toggle" style="position: fixed; top: 20px; right: 20px; padding: 10px 15px; border:none; border-radius:8px; cursor:pointer; background:#2563eb; color:white; z-index:1000;">
-  Toggle Theme
-</button>
 
-<script>
-  // Function to apply theme
-  function applyTheme(theme) {
-    if(theme === 'dark') {
-      document.documentElement.style.setProperty('--bg-color', '#1a1a1a');
-      document.documentElement.style.setProperty('--text-color', '#f5f5f5');
-    } else {
-      document.documentElement.style.setProperty('--bg-color', '#f5f7fa');
-      document.documentElement.style.setProperty('--text-color', '#222');
+  <script>
+    // Apply saved theme only (no toggle here)
+    let savedTheme = localStorage.getItem('ghxst-theme') || 'light';
+    if(savedTheme === 'dark') {
+      document.body.style.backgroundColor = '#1a1a1a';
+      document.body.style.color = '#f5f5f5';
     }
-    document.body.style.backgroundColor = getComputedStyle(document.documentElement).getPropertyValue('--bg-color');
-    document.body.style.color = getComputedStyle(document.documentElement).getPropertyValue('--text-color');
-  }
-
-  // Load saved theme
-  let savedTheme = localStorage.getItem('ghxst-theme') || 'light';
-  applyTheme(savedTheme);
-
-  // Toggle button
-  document.getElementById('theme-toggle').addEventListener('click', function() {
-    savedTheme = (savedTheme === 'light') ? 'dark' : 'light';
-    localStorage.setItem('ghxst-theme', savedTheme);
-    applyTheme(savedTheme);
-  });
-</script>
+  </script>
 </body>
 </html>
