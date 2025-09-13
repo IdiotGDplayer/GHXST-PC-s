@@ -3,177 +3,240 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Simple Builds - Gaming PCs</title>
+  <title>Gaming PCs – GHXST Lineup</title>
   <style>
     body {
       font-family: Arial, sans-serif;
-      background: #f2f6ff;
-      color: #222;
       margin: 0;
       padding: 0;
-      text-align: center;
+      background-color: #f5f7fa;
+      color: #222;
     }
     header {
-      padding: 20px;
+      background-color: #2563eb;
+      color: white;
+      padding: 1.5rem;
+      text-align: center;
       font-size: 2rem;
       font-weight: bold;
-      background: #0a3d62;
-      color: white;
     }
-    .pc-tier {
-      margin: 20px auto;
-      max-width: 700px;
+    .container {
+      max-width: 1000px;
+      margin: 2rem auto;
+      padding: 1rem;
+    }
+    .card {
       background: white;
-      padding: 20px;
       border-radius: 12px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-      text-align: left;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      padding: 1.5rem;
+      margin-bottom: 2rem;
+      transition: transform 0.2s;
     }
-    .pc-tier h2 {
-      margin: 0 0 10px 0;
-      font-size: 1.5rem;
-      color: #0a3d62;
-      text-align: center;
+    .card:hover {
+      transform: translateY(-4px);
+    }
+    .card h2 {
+      margin-top: 0;
+      color: #2563eb;
+      display: inline-block;
+    }
+    .specs {
+      margin-top: 1rem;
+      padding-left: 1rem;
+    }
+    .specs li {
+      margin: 0.3rem 0;
     }
     label {
+      font-size: 1.2rem;
       display: flex;
       align-items: center;
-      font-size: 1.1rem;
-      margin: 8px 0;
+      gap: 0.5rem;
     }
     input[type="checkbox"] {
-      width: 22px;
-      height: 22px;
-      margin-right: 12px;
+      transform: scale(1.4);
     }
-    button {
-      margin: 20px auto;
-      display: block;
-      padding: 12px 24px;
-      font-size: 1.1rem;
-      font-weight: bold;
-      background: #0a3d62;
+    .back-btn {
+      display: inline-block;
+      margin: 1rem;
+      padding: 0.8rem 1.5rem;
+      background-color: #2563eb;
       color: white;
-      border: none;
-      border-radius: 8px;
-      cursor: pointer;
-      transition: background 0.3s;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: bold;
     }
-    button:hover {
-      background: #07406d;
+    .back-btn:hover {
+      background-color: #1e4db7;
     }
   </style>
 </head>
 <body>
-  <header>GHXST Simple Builds – Gaming PCs</header>
+  <header>GHXST Gaming PCs</header>
+  <a href="index.html" class="back-btn">← Back to Main</a>
 
-  <!-- Back Button -->
-  <button onclick="window.location.href='/'">⬅ Back to Main</button>
+  <div class="container">
+    <!-- AeroLite -->
+    <div class="card">
+      <label><input type="checkbox" value="AeroLite"> <h2>AeroLite</h2></label>
+      <ul class="specs">
+        <li><b>CPU:</b> Intel Pentium Gold G7400 / AMD Athlon 3000G</li>
+        <li><b>Motherboard:</b> ASUS Prime H610M / ASRock A320M</li>
+        <li><b>GPU:</b> Intel UHD 710 / Vega 3</li>
+        <li><b>RAM:</b> 8GB DDR4</li>
+        <li><b>Storage:</b> 256GB SSD</li>
+        <li><b>PSU:</b> 400W Bronze</li>
+        <li><b>Cooling:</b> Stock Cooler</li>
+        <li><b>Case:</b> Mini Tower</li>
+        <li><b>Notes:</b> Basic gaming, office tasks</li>
+      </ul>
+    </div>
 
-  <!-- PC Tiers -->
-  <div class="pc-tier">
-    <h2>Tier 1 – Mega Potato</h2>
-    <label><input type="checkbox"> CPU: Intel Pentium G5400 / AMD Athlon 3000G</label>
-    <label><input type="checkbox"> GPU: NVIDIA GT 1030 / AMD RX 550</label>
-    <label><input type="checkbox"> RAM: 8GB DDR4</label>
-    <label><input type="checkbox"> Storage: 256GB SSD</label>
-    <label><input type="checkbox"> Motherboard: ASRock H310M-HDV / MSI A320M PRO-VH</label>
-    <label><input type="checkbox"> PSU: 400W Bronze</label>
+    <!-- NovaCore -->
+    <div class="card">
+      <label><input type="checkbox" value="NovaCore"> <h2>NovaCore</h2></label>
+      <ul class="specs">
+        <li><b>CPU:</b> Intel Core i3-12100 / AMD Ryzen 3 4100</li>
+        <li><b>Motherboard:</b> MSI B660M / ASUS Prime B450M</li>
+        <li><b>GPU:</b> GTX 1050 / RX 6400</li>
+        <li><b>RAM:</b> 8GB DDR4</li>
+        <li><b>Storage:</b> 512GB SSD</li>
+        <li><b>PSU:</b> 450W Bronze</li>
+        <li><b>Cooling:</b> Stock or small air cooler</li>
+        <li><b>Case:</b> Mini Tower</li>
+        <li><b>Notes:</b> Smooth 1080p gaming</li>
+      </ul>
+    </div>
+
+    <!-- Striker -->
+    <div class="card">
+      <label><input type="checkbox" value="Striker"> <h2>Striker</h2></label>
+      <ul class="specs">
+        <li><b>CPU:</b> Intel Core i5-12400 / AMD Ryzen 5 5600</li>
+        <li><b>Motherboard:</b> MSI B660 / ASUS TUF B550</li>
+        <li><b>GPU:</b> GTX 1660 / RX 6500 XT</li>
+        <li><b>RAM:</b> 16GB DDR4</li>
+        <li><b>Storage:</b> 1TB SSD</li>
+        <li><b>PSU:</b> 500W Bronze</li>
+        <li><b>Cooling:</b> Small Air Cooler</li>
+        <li><b>Case:</b> Mid Tower</li>
+        <li><b>Notes:</b> 1080p high settings</li>
+      </ul>
+    </div>
+
+    <!-- Phantom -->
+    <div class="card">
+      <label><input type="checkbox" value="Phantom"> <h2>Phantom</h2></label>
+      <ul class="specs">
+        <li><b>CPU:</b> Intel Core i5-13600K / AMD Ryzen 5 7600X</li>
+        <li><b>Motherboard:</b> ASUS TUF Z690 / MSI B650M</li>
+        <li><b>GPU:</b> RTX 2060 / RX 6600</li>
+        <li><b>RAM:</b> 16-32GB DDR4</li>
+        <li><b>Storage:</b> 1TB SSD + 1TB HDD</li>
+        <li><b>PSU:</b> 600W Gold</li>
+        <li><b>Cooling:</b> Air Cooler</li>
+        <li><b>Case:</b> Mid Tower</li>
+        <li><b>Notes:</b> 1080p / 1440p gaming</li>
+      </ul>
+    </div>
+
+    <!-- Titan -->
+    <div class="card">
+      <label><input type="checkbox" value="Titan"> <h2>Titan</h2></label>
+      <ul class="specs">
+        <li><b>CPU:</b> Intel Core i7-13700KF / AMD Ryzen 7 7700X</li>
+        <li><b>Motherboard:</b> ASUS ROG Strix Z790 / MSI X670</li>
+        <li><b>GPU:</b> RTX 3060 / RX 6700 XT</li>
+        <li><b>RAM:</b> 32GB DDR5</li>
+        <li><b>Storage:</b> 2TB SSD</li>
+        <li><b>PSU:</b> 650W Gold</li>
+        <li><b>Cooling:</b> Air / AIO 240mm</li>
+        <li><b>Case:</b> Mid / Large Tower</li>
+        <li><b>Notes:</b> High settings 1440p</li>
+      </ul>
+    </div>
+
+    <!-- Vanguard -->
+    <div class="card">
+      <label><input type="checkbox" value="Vanguard"> <h2>Vanguard</h2></label>
+      <ul class="specs">
+        <li><b>CPU:</b> Intel Core i7-14700K / AMD Ryzen 9 7900</li>
+        <li><b>Motherboard:</b> ASUS ROG Strix Z790 / MSI X670E</li>
+        <li><b>GPU:</b> RTX 3070 / RX 6800</li>
+        <li><b>RAM:</b> 32-64GB DDR5</li>
+        <li><b>Storage:</b> 2TB SSD + 2TB HDD</li>
+        <li><b>PSU:</b> 750W Gold</li>
+        <li><b>Cooling:</b> AIO 240-280mm</li>
+        <li><b>Case:</b> Large Tower</li>
+        <li><b>Notes:</b> 1440p / entry 4K gaming</li>
+      </ul>
+    </div>
+
+    <!-- Predator X -->
+    <div class="card">
+      <label><input type="checkbox" value="Predator X"> <h2>Predator X</h2></label>
+      <ul class="specs">
+        <li><b>CPU:</b> Intel Core i9-14900KF / AMD Ryzen 9 7950X</li>
+        <li><b>Motherboard:</b> ASUS ROG Maximus Z790 / MSI MEG X670E</li>
+        <li><b>GPU:</b> RTX 4080 / RX 7900 XT</li>
+        <li><b>RAM:</b> 64GB DDR5</li>
+        <li><b>Storage:</b> 4TB SSD</li>
+        <li><b>PSU:</b> 850W Platinum</li>
+        <li><b>Cooling:</b> AIO 360mm</li>
+        <li><b>Case:</b> Full Tower</li>
+        <li><b>Notes:</b> 4K gaming / streaming</li>
+      </ul>
+    </div>
+
+    <!-- Legion Z -->
+    <div class="card">
+      <label><input type="checkbox" value="Legion Z"> <h2>Legion Z</h2></label>
+      <ul class="specs">
+        <li><b>CPU:</b> Intel Core i9-14900K / AMD Ryzen 9 7950X</li>
+        <li><b>Motherboard:</b> ASUS ROG Maximus Z790 / MSI MEG X670E</li>
+        <li><b>GPU:</b> RTX 4090 / RX 7900 XTX</li>
+        <li><b>RAM:</b> 128GB DDR5</li>
+        <li><b>Storage:</b> 4TB SSD + 2TB HDD</li>
+        <li><b>PSU:</b> 1000W Platinum</li>
+        <li><b>Cooling:</b> Custom Loop / High-end AIO</li>
+        <li><b>Case:</b> Super Tower</li>
+        <li><b>Notes:</b> 4K / 8K gaming, VR-ready</li>
+      </ul>
+    </div>
+
+    <!-- Dominion RX -->
+    <div class="card">
+      <label><input type="checkbox" value="Dominion RX"> <h2>Dominion RX</h2></label>
+      <ul class="specs">
+        <li><b>CPU:</b> Intel Core i9-14900K / AMD Ryzen 9 7950X</li>
+        <li><b>Motherboard:</b> ASUS ROG Maximus Z790 / MSI MEG X670E</li>
+        <li><b>GPU:</b> Dual RTX 4090 / Dual RX 7900 XTX</li>
+        <li><b>RAM:</b> 256GB DDR5</li>
+        <li><b>Storage:</b> 8TB SSD</li>
+        <li><b>PSU:</b> 1500W Platinum</li>
+        <li><b>Cooling:</b> Custom Loop</li>
+        <li><b>Case:</b> Super Tower</li>
+        <li><b>Notes:</b> Extreme multi-GPU, VR, content creation</li>
+      </ul>
+    </div>
+
+    <!-- Apex Nova -->
+    <div class="card">
+      <label><input type="checkbox" value="Apex Nova"> <h2>Apex Nova</h2></label>
+      <ul class="specs">
+        <li><b>CPU:</b> Intel Core i9-14900K / AMD Ryzen 9 7950X</li>
+        <li><b>Motherboard:</b> ASUS ROG Maximus Z790 / MSI MEG X670E</li>
+        <li><b>GPU:</b> Quad RTX 4090 / Quad RX 7900 XTX</li>
+        <li><b>RAM:</b> 512GB DDR5</li>
+        <li><b>Storage:</b> 16TB SSD + 8TB HDD</li>
+        <li><b>PSU:</b> 2500W Platinum</li>
+        <li><b>Cooling:</b> Full Custom Loop</li>
+        <li><b>Case:</b> Super Tower</li>
+        <li><b>Notes:</b> Absolute pinnacle, PCBS2-ready</li>
+      </ul>
+    </div>
+
   </div>
-
-  <div class="pc-tier">
-    <h2>Tier 2 – Budget Gamer</h2>
-    <label><input type="checkbox"> CPU: Intel i3-10100F / AMD Ryzen 3 3100</label>
-    <label><input type="checkbox"> GPU: GTX 1650 / RX 570</label>
-    <label><input type="checkbox"> RAM: 16GB DDR4</label>
-    <label><input type="checkbox"> Storage: 512GB SSD</label>
-    <label><input type="checkbox"> Motherboard: MSI B460M-A PRO / ASRock B450M-HDV</label>
-    <label><input type="checkbox"> PSU: 450W Bronze</label>
-  </div>
-
-  <div class="pc-tier">
-    <h2>Tier 3 – Starter Build</h2>
-    <label><input type="checkbox"> CPU: Intel i5-10400F / AMD Ryzen 5 3600</label>
-    <label><input type="checkbox"> GPU: GTX 1660 Super / RX 580</label>
-    <label><input type="checkbox"> RAM: 16GB DDR4</label>
-    <label><input type="checkbox"> Storage: 1TB HDD + 512GB SSD</label>
-    <label><input type="checkbox"> Motherboard: MSI B460M Mortar / Gigabyte B450 AORUS M</label>
-    <label><input type="checkbox"> PSU: 500W Bronze</label>
-  </div>
-
-  <div class="pc-tier">
-    <h2>Tier 4 – Casual Gamer</h2>
-    <label><input type="checkbox"> CPU: Intel i5-11400F / AMD Ryzen 5 5600</label>
-    <label><input type="checkbox"> GPU: RTX 2060 / RX 5600 XT</label>
-    <label><input type="checkbox"> RAM: 16GB DDR4</label>
-    <label><input type="checkbox"> Storage: 1TB SSD</label>
-    <label><input type="checkbox"> Motherboard: ASUS B560M-A / MSI B550M PRO-VDH</label>
-    <label><input type="checkbox"> PSU: 550W Gold</label>
-  </div>
-
-  <div class="pc-tier">
-    <h2>Tier 5 – Mid-Range Hero</h2>
-    <label><input type="checkbox"> CPU: Intel i5-12400F / AMD Ryzen 5 5600X</label>
-    <label><input type="checkbox"> GPU: RTX 3060 / RX 6600 XT</label>
-    <label><input type="checkbox"> RAM: 16GB DDR4-3200</label>
-    <label><input type="checkbox"> Storage: 1TB NVMe SSD</label>
-    <label><input type="checkbox"> Motherboard: MSI B660M PRO / ASUS B550-F Gaming</label>
-    <label><input type="checkbox"> PSU: 650W Gold</label>
-  </div>
-
-  <div class="pc-tier">
-    <h2>Tier 6 – Performance Gamer</h2>
-    <label><input type="checkbox"> CPU: Intel i5-13400F / AMD Ryzen 7 5700X</label>
-    <label><input type="checkbox"> GPU: RTX 3060 Ti / RX 6700 XT</label>
-    <label><input type="checkbox"> RAM: 32GB DDR4</label>
-    <label><input type="checkbox"> Storage: 1TB NVMe SSD + 2TB HDD</label>
-    <label><input type="checkbox"> Motherboard: ASUS B660M-PLUS / Gigabyte B550 AORUS Elite</label>
-    <label><input type="checkbox"> PSU: 650W Gold</label>
-  </div>
-
-  <div class="pc-tier">
-    <h2>Tier 7 – High-End Gamer</h2>
-    <label><input type="checkbox"> CPU: Intel i7-12700F / AMD Ryzen 7 5800X3D</label>
-    <label><input type="checkbox"> GPU: RTX 3070 / RX 6800</label>
-    <label><input type="checkbox"> RAM: 32GB DDR4</label>
-    <label><input type="checkbox"> Storage: 2TB NVMe SSD</label>
-    <label><input type="checkbox"> Motherboard: ASUS Z690-P / MSI X570 Tomahawk</label>
-    <label><input type="checkbox"> PSU: 750W Gold</label>
-  </div>
-
-  <div class="pc-tier">
-    <h2>Tier 8 – Enthusiast Gamer</h2>
-    <label><input type="checkbox"> CPU: Intel i7-13700K / AMD Ryzen 9 7900</label>
-    <label><input type="checkbox"> GPU: RTX 3080 / RX 6800 XT</label>
-    <label><input type="checkbox"> RAM: 32GB DDR5</label>
-    <label><input type="checkbox"> Storage: 2TB NVMe SSD</label>
-    <label><input type="checkbox"> Motherboard: ASUS Z790-F Gaming / MSI X670 A-PRO</label>
-    <label><input type="checkbox"> PSU: 850W Gold</label>
-  </div>
-
-  <div class="pc-tier">
-    <h2>Tier 9 – Extreme Gamer</h2>
-    <label><input type="checkbox"> CPU: Intel i9-13900K / AMD Ryzen 9 7950X</label>
-    <label><input type="checkbox"> GPU: RTX 4080 / RX 7900 XTX</label>
-    <label><input type="checkbox"> RAM: 64GB DDR5</label>
-    <label><input type="checkbox"> Storage: 4TB NVMe SSD</label>
-    <label><input type="checkbox"> Motherboard: ASUS Z790 Hero / Gigabyte X670E AORUS Master</label>
-    <label><input type="checkbox"> PSU: 1000W Platinum</label>
-  </div>
-
-  <div class="pc-tier">
-    <h2>Tier 10 – Full God PC</h2>
-    <label><input type="checkbox"> CPU: Intel i9-14900K / AMD Ryzen 9 7950X3D</label>
-    <label><input type="checkbox"> GPU: RTX 5090 / RX 8950 XTX</label>
-    <label><input type="checkbox"> RAM: 128GB DDR5</label>
-    <label><input type="checkbox"> Storage: 8TB NVMe SSD + 10TB HDD</label>
-    <label><input type="checkbox"> Motherboard: ASUS Z890 Extreme / MSI X790 GODLIKE</label>
-    <label><input type="checkbox"> PSU: 1200W Platinum</label>
-  </div>
-
-  <!-- Back Button -->
-  <button onclick="window.location.href='/'">⬅ Back to Main</button>
-
 </body>
 </html>
-
