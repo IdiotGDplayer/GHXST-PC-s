@@ -3,432 +3,147 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>GHXST Simple Builds</title>
-<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+<title>GHXST Simple Selection</title>
 <style>
-  :root {
-    --bg-light: #f5f5f5;
-    --bg-dark: #121212;
-    --card-light: #ffffff;
-    --card-dark: #1e1e1e;
-    --text-light: #000;
-    --text-dark: #f5f5f5;
-    --accent: #4f46e5;
-  }
-  body { margin:0; font-family: 'Roboto', sans-serif; background-color: var(--bg-light); color: var(--text-light); transition: background-color 0.3s, color 0.3s; }
-  .dark-mode { background-color: var(--bg-dark); color: var(--text-dark); }
-  header { display:flex; align-items:center; padding:1rem; background-color: var(--card-light); justify-content: space-between; box-shadow:0 2px 5px rgba(0,0,0,0.1);}
-  .dark-mode header { background-color: var(--card-dark); }
-  .discord-btn { background-color: #7289da; color: white; padding: 0.5rem 1rem; border:none; border-radius:6px; cursor:pointer; font-weight:bold; text-decoration:none;}
-  .theme-toggle { margin-left:1rem; cursor:pointer; font-size:1.2rem; }
-  main { padding:1rem; display:grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap:1rem; }
-  .tier-card { background-color: var(--card-light); border-radius:12px; padding:1rem; box-shadow:0 2px 10px rgba(0,0,0,0.1); transition: background-color 0.3s, color 0.3s; }
-  .dark-mode .tier-card { background-color: var(--card-dark); }
-  .tier-card h2 { margin-top:0; margin-bottom:0.5rem; color: var(--accent); }
-  .tier-card ul { list-style:none; padding-left:0; }
-  .tier-card ul li { margin-bottom:0.25rem; }
-  .tier-select { margin-top:0.5rem; }
-  .category { grid-column: 1/-1; font-size:1.5rem; font-weight:bold; margin-top:2rem; margin-bottom:1rem; color: var(--accent); }
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f5f5f5;
+        color: #222;
+        transition: background-color 0.3s, color 0.3s;
+    }
+    body.dark-mode {
+        background-color: #121212;
+        color: #f5f5f5;
+    }
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 15px 30px;
+        background-color: #0077cc;
+        color: #fff;
+    }
+    header a {
+        color: #fff;
+        text-decoration: none;
+        font-weight: bold;
+        margin-right: 20px;
+    }
+    header button {
+        cursor: pointer;
+        background: none;
+        border: none;
+        color: #fff;
+        font-size: 18px;
+    }
+    h1 {
+        text-align: center;
+        font-size: 2em;
+        margin: 20px 0;
+    }
+    section {
+        max-width: 1000px;
+        margin: auto;
+        padding: 20px;
+        border-bottom: 1px solid #ccc;
+    }
+    .tier-title {
+        font-size: 1.8em;
+        font-weight: bold;
+        text-align: center;
+        margin-bottom: 10px;
+    }
+    .option {
+        display: flex;
+        align-items: center;
+        margin: 8px 0;
+    }
+    .option input[type="checkbox"] {
+        transform: scale(1.5);
+        margin-right: 15px;
+    }
+    .option label {
+        font-size: 1.2em;
+    }
+    .back-button {
+        display: block;
+        margin: 30px auto;
+        padding: 12px 30px;
+        font-size: 1.2em;
+        font-weight: bold;
+        background-color: #0077cc;
+        color: #fff;
+        border: none;
+        cursor: pointer;
+        border-radius: 8px;
+        text-align: center;
+        text-decoration: none;
+    }
+    .back-button:hover {
+        background-color: #005fa3;
+    }
 </style>
 </head>
 <body>
-
 <header>
-  <a href="https://discord.gg/YOURDISCORD" target="_blank" class="discord-btn">Discord</a>
-  <span class="theme-toggle" id="themeToggle">🌙</span>
+    <a href="index.html">Discord</a>
+    <button id="toggle-dark">🌓</button>
 </header>
 
-<main>
+<h1>GHXST Simple PC Selection</h1>
 
-  <!-- Gaming Builds -->
-  <div class="category">Gaming Builds</div>
+<!-- Gaming Tiers -->
+<section>
+    <div class="tier-title">Gaming PCs</div>
+    <div class="option"><input type="checkbox" id="aerolite"><label for="aerolite">AeroLite – Pentium Gold G7400 / Athlon 3000G, 8GB DDR4, 256GB SSD, Mini Tower</label></div>
+    <div class="option"><input type="checkbox" id="novacore"><label for="novacore">NovaCore – Core i3-12100 / Ryzen 3 4100, 8GB DDR4, 512GB SSD, Mini Tower</label></div>
+    <div class="option"><input type="checkbox" id="striker"><label for="striker">Striker – Core i5-12400 / Ryzen 5 5600, 16GB DDR4, 1TB SSD, Mid Tower</label></div>
+    <div class="option"><input type="checkbox" id="phantom"><label for="phantom">Phantom – Core i5-13600K / Ryzen 5 7600X, 16-32GB DDR4, 1TB SSD + 1TB HDD, Mid Tower</label></div>
+    <div class="option"><input type="checkbox" id="titan"><label for="titan">Titan – Core i7-13700KF / Ryzen 7 7700X, 32GB DDR5, 2TB SSD, Mid/Large Tower</label></div>
+    <div class="option"><input type="checkbox" id="vanguard"><label for="vanguard">Vanguard – Core i7-14700K / Ryzen 9 7900, 32-64GB DDR5, 2TB SSD + 2TB HDD, Large Tower</label></div>
+    <div class="option"><input type="checkbox" id="predatorx"><label for="predatorx">Predator X – Core i9-14900KF / Ryzen 9 7950X, 64GB DDR5, 4TB SSD, Full Tower</label></div>
+    <div class="option"><input type="checkbox" id="legionz"><label for="legionz">Legion Z – Core i9-14900K / Ryzen 9 7950X, 128GB DDR5, 4TB SSD + 2TB HDD, Super Tower</label></div>
+    <div class="option"><input type="checkbox" id="dominionrx"><label for="dominionrx">Dominion RX – Core i9-14900K / Ryzen 9 7950X, Dual RTX 4090 / Dual RX 7900 XTX, 256GB DDR5, 8TB SSD, Super Tower</label></div>
+    <div class="option"><input type="checkbox" id="apexnova"><label for="apexnova">Apex Nova – Core i9-14900K / Ryzen 9 7950X, Quad RTX 4090 / Quad RX 7900 XTX, 512GB DDR5, 16TB SSD + 8TB HDD, Super Tower</label></div>
+</section>
 
-  <div class="tier-card">
-    <h2>AeroLite</h2>
-    <ul>
-      <li>CPU: Intel Pentium Gold G7400 / AMD Athlon 3000G</li>
-      <li>Motherboard: ASUS Prime H610M / ASRock A320M</li>
-      <li>GPU: Intel UHD 710 / Vega 3</li>
-      <li>RAM: 8GB DDR4</li>
-      <li>Storage: 256GB SSD</li>
-      <li>PSU: 400W Bronze</li>
-      <li>Cooling: Stock Cooler</li>
-      <li>Case: Mini Tower</li>
-      <li>Notes: Basic gaming, office tasks</li>
-    </ul>
-    <div class="tier-select"><input type="checkbox" id="AeroLite"><label for="AeroLite"> Select AeroLite</label></div>
-  </div>
+<!-- Workstation/Server Tiers -->
+<section>
+    <div class="tier-title">Workstation / Server PCs</div>
+    <div class="option"><input type="checkbox" id="corestation"><label for="corestation">CoreStation – Xeon E-2336 / Ryzen 5 5600, 16GB DDR4, 4TB SSD + 8TB HDD, Mid Tower</label></div>
+    <div class="option"><input type="checkbox" id="dataforge"><label for="dataforge">DataForge – Xeon W-1290P / Ryzen 7 7700, 32GB DDR4, 1TB SSD + 1TB HDD / 2TB SSD, Mid/Large Tower</label></div>
+    <div class="option"><input type="checkbox" id="vectorprime"><label for="vectorprime">VectorPrime – Xeon W-1390 / Ryzen 9 7900X, 64GB DDR5, 2TB SSD + 2TB HDD, Large Tower</label></div>
+    <div class="option"><input type="checkbox" id="titaniumgrid"><label for="titaniumgrid">TitaniumGrid – Dual Xeon W-2295 / Threadripper 5950X, 128GB DDR5, 4TB SSD + 4TB HDD, Full Tower</label></div>
+    <div class="option"><input type="checkbox" id="oblivionnode"><label for="oblivionnode">OblivionNode – Dual Xeon Platinum 8352Y / Threadripper Pro 3995WX, 256GB DDR5, 8TB SSD + 8TB HDD, Super Tower</label></div>
+</section>
 
-  <div class="tier-card">
-    <h2>NovaCore</h2>
-    <ul>
-      <li>CPU: Intel Core i3-12100 / AMD Ryzen 3 4100</li>
-      <li>Motherboard: MSI B660M / ASUS Prime B450M</li>
-      <li>GPU: GTX 1050 / RX 6400</li>
-      <li>RAM: 8GB DDR4</li>
-      <li>Storage: 512GB SSD</li>
-      <li>PSU: 450W Bronze</li>
-      <li>Cooling: Stock or small air cooler</li>
-      <li>Case: Mini Tower</li>
-      <li>Notes: Smooth 1080p gaming</li>
-    </ul>
-    <div class="tier-select"><input type="checkbox" id="NovaCore"><label for="NovaCore"> Select NovaCore</label></div>
-  </div>
+<!-- NAS Tiers -->
+<section>
+    <div class="tier-title">NAS PCs</div>
+    <div class="option"><input type="checkbox" id="spindlecore"><label for="spindlecore">SpindleCore – Core i3-12100 / Ryzen 3 4100, 16GB DDR4, 4TB SSD + 8TB HDD, Mini ITX</label></div>
+    <div class="option"><input type="checkbox" id="dataforgenx"><label for="dataforgenx">DataForge NX – Core i5-12400 / Ryzen 5 5600, 32GB DDR4, 8TB SSD + 16TB HDD, Mini ITX</label></div>
+    <div class="option"><input type="checkbox" id="titanvault"><label for="titanvault">TitanVault – Core i7-13700KF / Ryzen 7 7700X, 64GB DDR5, 16TB SSD + 32TB HDD, Mini ITX</label></div>
+</section>
 
-  <div class="tier-card">
-    <h2>Striker</h2>
-    <ul>
-      <li>CPU: Intel Core i5-12400 / AMD Ryzen 5 5600</li>
-      <li>Motherboard: MSI B660 / ASUS TUF B550</li>
-      <li>GPU: GTX 1660 / RX 6500 XT</li>
-      <li>RAM: 16GB DDR4</li>
-      <li>Storage: 1TB SSD</li>
-      <li>PSU: 500W Bronze</li>
-      <li>Cooling: Small Air Cooler</li>
-      <li>Case: Mid Tower</li>
-      <li>Notes: 1080p high settings</li>
-    </ul>
-    <div class="tier-select"><input type="checkbox" id="Striker"><label for="Striker"> Select Striker</label></div>
-  </div>
+<!-- Mini-ITX Slimline -->
+<section>
+    <div class="tier-title">Slimline Mini-ITX PCs</div>
+    <div class="option"><input type="checkbox" id="aeromini"><label for="aeromini">AeroMini – Core i3-12100 / Ryzen 3 4100, 8GB DDR4, 256GB SSD / 512GB SSD, Mini ITX</label></div>
+    <div class="option"><input type="checkbox" id="novamini"><label for="novamini">NovaMini – Core i5-12400 / Ryzen 5 5600, 16GB DDR4, 512GB SSD + 1TB HDD / 1TB SSD, Mini ITX</label></div>
+    <div class="option"><input type="checkbox" id="strikermini"><label for="strikermini">Striker Mini – Core i5-13400 / Ryzen 5 7600, 16GB DDR4, 1TB SSD / 1TB SSD + 1TB HDD, Mini ITX</label></div>
+    <div class="option"><input type="checkbox" id="phantommini"><label for="phantommini">Phantom Mini – Core i7-13700KF / Ryzen 7 7700X, 32GB DDR5, 2TB SSD / 2TB SSD + 1TB HDD, Mini ITX</label></div>
+    <div class="option"><input type="checkbox" id="titanmini"><label for="titanmini">Titan Mini – Core i9-14900K / Ryzen 9 7950X, 64GB DDR5, 4TB SSD / 4TB SSD + 2TB HDD, Mini ITX</label></div>
+</section>
 
-  <div class="tier-card">
-    <h2>Phantom</h2>
-    <ul>
-      <li>CPU: Intel Core i5-13600K / AMD Ryzen 5 7600X</li>
-      <li>Motherboard: ASUS TUF Z690 / MSI B650M</li>
-      <li>GPU: RTX 2060 / RX 6600</li>
-      <li>RAM: 16-32GB DDR4</li>
-      <li>Storage: 1TB SSD + 1TB HDD</li>
-      <li>PSU: 600W Gold</li>
-      <li>Cooling: Air Cooler</li>
-      <li>Case: Mid Tower</li>
-      <li>Notes: 1080p / 1440p gaming</li>
-    </ul>
-    <div class="tier-select"><input type="checkbox" id="Phantom"><label for="Phantom"> Select Phantom</label></div>
-  </div>
-
-  <div class="tier-card">
-    <h2>Titan</h2>
-    <ul>
-      <li>CPU: Intel Core i7-13700KF / AMD Ryzen 7 7700X</li>
-      <li>Motherboard: ASUS ROG Strix Z790 / MSI X670</li>
-      <li>GPU: RTX 3060 / RX 6700 XT</li>
-      <li>RAM: 32GB DDR5</li>
-      <li>Storage: 2TB SSD</li>
-      <li>PSU: 650W Gold</li>
-      <li>Cooling: Air / AIO 240mm</li>
-      <li>Case: Mid / Large Tower</li>
-      <li>Notes: High settings 1440p</li>
-    </ul>
-    <div class="tier-select"><input type="checkbox" id="Titan"><label for="Titan"> Select Titan</label></div>
-  </div>
-
-  <div class="tier-card">
-    <h2>Vanguard</h2>
-    <ul>
-      <li>CPU: Intel Core i7-14700K / AMD Ryzen 9 7900</li>
-      <li>Motherboard: ASUS ROG Strix Z790 / MSI X670E</li>
-      <li>GPU: RTX 3070 / RX 6800</li>
-      <li>RAM: 32-64GB DDR5</li>
-      <li>Storage: 2TB SSD + 2TB HDD</li>
-      <li>PSU: 750W Gold</li>
-      <li>Cooling: AIO 240-280mm</li>
-      <li>Case: Large Tower</li>
-      <li>Notes: 1440p / entry 4K gaming</li>
-    </ul>
-    <div class="tier-select"><input type="checkbox" id="Vanguard"><label for="Vanguard"> Select Vanguard</label></div>
-  </div>
-
-  <div class="tier-card">
-    <h2>Predator X</h2>
-    <ul>
-      <li>CPU: Intel Core i9-14900KF / AMD Ryzen 9 7950X</li>
-      <li>Motherboard: ASUS ROG Maximus Z790 / MSI MEG X670E</li>
-      <li>GPU: RTX 4080 / RX 7900 XT</li>
-      <li>RAM: 64GB DDR5</li>
-      <li>Storage: 4TB SSD</li>
-      <li>PSU: 850W Platinum</li>
-      <li>Cooling: AIO 360mm</li>
-      <li>Case: Full Tower</li>
-      <li>Notes: 4K gaming / streaming</li>
-    </ul>
-    <div class="tier-select"><input type="checkbox" id="PredatorX"><label for="PredatorX"> Select Predator X</label></div>
-  </div>
-
-  <div class="tier-card">
-    <h2>Legion Z</h2>
-    <ul>
-      <li>CPU: Intel Core i9-14900K / AMD Ryzen 9 7950X</li>
-      <li>Motherboard: ASUS ROG Maximus Z790 / MSI MEG X670E</li>
-      <li>GPU: RTX 4090 / RX 7900 XTX</li>
-      <li>RAM: 128GB DDR5</li>
-      <li>Storage: 4TB SSD + 2TB HDD</li>
-      <li>PSU: 1000W Platinum</li>
-      <li>Cooling: Custom Loop / High-end AIO</li>
-      <li>Case: Super Tower</li>
-      <li>Notes: 4K / 8K gaming, VR-ready</li>
-    </ul>
-    <div class="tier-select"><input type="checkbox" id="LegionZ"><label for="LegionZ"> Select Legion Z</label></div>
-  </div>
-
-  <div class="tier-card">
-    <h2>Dominion RX</h2>
-    <ul>
-      <li>CPU: Intel Core i9-14900K / AMD Ryzen 9 7950X</li>
-      <li>Motherboard: ASUS ROG Maximus Z790 / MSI MEG X670E</li>
-      <li>GPU: Dual RTX 4090 / Dual RX 7900 XTX</li>
-      <li>RAM: 256GB DDR5</li>
-      <li>Storage: 8TB SSD</li>
-      <li>PSU: 1500W Platinum</li>
-      <li>Cooling: Custom Loop</li>
-      <li>Case: Super Tower</li>
-      <li>Notes: Extreme multi-GPU, VR, content creation</li>
-    </ul>
-    <div class="tier-select"><input type="checkbox" id="DominionRX"><label for="DominionRX"> Select Dominion RX</label></div>
-  </div>
-
-  <div class="tier-card">
-    <h2>Apex Nova</h2>
-    <ul>
-      <li>CPU: Intel Core i9-14900K / AMD Ryzen 9 7950X</li>
-      <li>Motherboard: ASUS ROG Maximus Z790 / MSI MEG X670E</li>
-      <li>GPU: Quad RTX 4090 / Quad RX 7900 XTX</li>
-      <li>RAM: 512GB DDR5</li>
-      <li>Storage: 16TB SSD + 8TB HDD</li>
-      <li>PSU: 2500W Platinum</li>
-      <li>Cooling: Full Custom Loop</li>
-      <li>Case: Super Tower</li>
-      <li>Notes: Absolute pinnacle, PCBS2-ready</li>
-    </ul>
-    <div class="tier-select"><input type="checkbox" id="ApexNova"><label for="ApexNova"> Select Apex Nova</label></div>
-  </div>
-
-  <!-- Workstation/Server Builds -->
-  <div class="category">Workstation / Server Builds</div>
-
-  <div class="tier-card">
-    <h2>CoreStation</h2>
-    <ul>
-      <li>CPU: Intel Xeon E-2336 / AMD Ryzen 5 5600</li>
-      <li>Motherboard: ASUS Workstation W480 / MSI B550 Pro</li>
-      <li>GPU: NVIDIA Quadro P620 / RX 6400</li>
-      <li>RAM: 16GB DDR4</li>
-      <li>Storage: 4TB SSD + 8TB HDD / 2TB SSD + 12TB HDD</li>
-      <li>PSU: 500W Bronze</li>
-      <li>Cooling: Stock / Small Air</li>
-      <li>Case: Mid Tower</li>
-      <li>Notes: Entry-level workstation, office, light rendering</li>
-    </ul>
-    <div class="tier-select"><input type="checkbox" id="CoreStation"><label for="CoreStation"> Select CoreStation</label></div>
-  </div>
-
-  <div class="tier-card">
-    <h2>DataForge</h2>
-    <ul>
-      <li>CPU: Intel Xeon W-1290P / AMD Ryzen 7 7700</li>
-      <li>Motherboard: ASUS ProArt Z790 / MSI X670</li>
-      <li>GPU: NVIDIA Quadro P2200 / RTX 3060</li>
-      <li>RAM: 32GB DDR4</li>
-      <li>Storage: 1TB SSD + 1TB HDD / 2TB SSD</li>
-      <li>PSU: 650W Gold</li>
-      <li>Cooling: Air Cooler / AIO 240mm</li>
-      <li>Case: Mid/Large Tower</li>
-      <li>Notes: Mid-tier workstation, multitasking, content creation</li>
-    </ul>
-    <div class="tier-select"><input type="checkbox" id="DataForge"><label for="DataForge"> Select DataForge</label></div>
-  </div>
-
-  <div class="tier-card">
-    <h2>VectorPrime</h2>
-    <ul>
-      <li>CPU: Intel Xeon W-1390 / AMD Ryzen 9 7900X</li>
-      <li>Motherboard: ASUS Pro WS Z790E / MSI MEG X670E</li>
-      <li>GPU: NVIDIA RTX A4000 / RTX 4070</li>
-      <li>RAM: 64GB DDR5</li>
-      <li>Storage: 2TB SSD + 2TB HDD</li>
-      <li>PSU: 850W Platinum</li>
-      <li>Cooling: AIO 280mm</li>
-      <li>Case: Large Tower</li>
-      <li>Notes: High-end workstation, 3D rendering, heavy software workloads</li>
-    </ul>
-    <div class="tier-select"><input type="checkbox" id="VectorPrime"><label for="VectorPrime"> Select VectorPrime</label></div>
-  </div>
-
-  <div class="tier-card">
-    <h2>TitaniumGrid</h2>
-    <ul>
-      <li>CPU: Dual Intel Xeon W-2295 / AMD Threadripper 5950X</li>
-      <li>Motherboard: ASUS WS C621 / MSI TRX40</li>
-      <li>GPU: NVIDIA RTX A5000 / RX 6900 XT</li>
-      <li>RAM: 128GB DDR5</li>
-      <li>Storage: 4TB SSD + 4TB HDD</li>
-      <li>PSU: 1200W Platinum</li>
-      <li>Cooling: High-end AIO / Custom Loop</li>
-      <li>Case: Full Tower</li>
-      <li>Notes: Extreme workstation/server, dual CPU, GPU compute support</li>
-    </ul>
-    <div class="tier-select"><input type="checkbox" id="TitaniumGrid"><label for="TitaniumGrid"> Select TitaniumGrid</label></div>
-  </div>
-
-  <div class="tier-card">
-    <h2>OblivionNode</h2>
-    <ul>
-      <li>CPU: Dual Intel Xeon Platinum 8352Y / AMD Threadripper Pro 3995WX</li>
-      <li>Motherboard: ASUS WS C621E / MSI TRX40 Pro</li>
-      <li>GPU: Dual NVIDIA RTX A6000 / Dual RX 7900 XTX</li>
-      <li>RAM: 256GB DDR5</li>
-      <li>Storage: 8TB SSD + 8TB HDD</li>
-      <li>PSU: 2000W Platinum</li>
-      <li>Cooling: Full Custom Loop</li>
-      <li>Case: Super Tower</li>
-      <li>Notes: Flagship workstation/server, max cores, multi-GPU, heavy workloads</li>
-    </ul>
-    <div class="tier-select"><input type="checkbox" id="OblivionNode"><label for="OblivionNode"> Select OblivionNode</label></div>
-  </div>
-
-  <!-- NAS Builds -->
-  <div class="category">NAS Builds</div>
-
-  <div class="tier-card">
-    <h2>SpindleCore</h2>
-    <ul>
-      <li>CPU: Intel Core i3-12100 / AMD Ryzen 3 4100</li>
-      <li>Motherboard: ASUS Prime H610I / ASRock B450 Gaming-ITX</li>
-      <li>GPU: Integrated / RX 6400</li>
-      <li>RAM: 16GB DDR4</li>
-      <li>Storage: 4TB SSD + 8TB HDD / 2TB SSD + 12TB HDD</li>
-      <li>PSU: 450W Bronze</li>
-      <li>Cooling: Stock / Small Air</li>
-      <li>Case: Mini ITX</li>
-      <li>Notes: Entry-level NAS, multiple drives, lots of SATA ports</li>
-    </ul>
-    <div class="tier-select"><input type="checkbox" id="SpindleCore"><label for="SpindleCore"> Select SpindleCore</label></div>
-  </div>
-
-  <div class="tier-card">
-    <h2>DataForge NX</h2>
-    <ul>
-      <li>CPU: Intel Core i5-12400 / AMD Ryzen 5 5600</li>
-      <li>Motherboard: ASUS ProArt B660-I / MSI B550I</li>
-      <li>GPU: Integrated / RTX 3060</li>
-      <li>RAM: 32GB DDR4</li>
-      <li>Storage: 8TB SSD + 16TB HDD / 12TB SSD + 12TB HDD</li>
-      <li>PSU: 600W Gold</li>
-      <li>Cooling: Air Cooler</li>
-      <li>Case: Mini ITX</li>
-      <li>Notes: Mid-tier NAS, fast storage, multiple drives, RAID capable</li>
-    </ul>
-    <div class="tier-select"><input type="checkbox" id="DataForgeNX"><label for="DataForgeNX"> Select DataForge NX</label></div>
-  </div>
-
-  <div class="tier-card">
-    <h2>TitanVault</h2>
-    <ul>
-      <li>CPU: Intel Core i7-13700KF / AMD Ryzen 7 7700X</li>
-      <li>Motherboard: ASUS Pro WS Z790-I / MSI X670I</li>
-      <li>GPU: Integrated / RTX 4070</li>
-      <li>RAM: 64GB DDR5</li>
-      <li>Storage: 16TB SSD + 32TB HDD / 24TB SSD + 24TB HDD</li>
-      <li>PSU: 850W Platinum</li>
-      <li>Cooling: AIO 240mm</li>
-      <li>Case: Mini ITX</li>
-      <li>Notes: Extreme NAS, maxed out storage, multiple SATA/SAS ports, workstation-grade performance</li>
-    </ul>
-    <div class="tier-select"><input type="checkbox" id="TitanVault"><label for="TitanVault"> Select TitanVault</label></div>
-  </div>
-
-  <!-- Slimline Mini-ITX Builds -->
-  <div class="category">Slimline Mini-ITX Builds</div>
-
-  <div class="tier-card">
-    <h2>AeroMini</h2>
-    <ul>
-      <li>CPU: Intel Core i3-12100 / AMD Ryzen 3 4100</li>
-      <li>Motherboard: ASUS Prime H610I / ASRock B450-I</li>
-      <li>GPU: Integrated / RX 6400</li>
-      <li>RAM: 8GB DDR4</li>
-      <li>Storage: 256GB SSD / 512GB SSD</li>
-      <li>PSU: 300W Bronze</li>
-      <li>Cooling: Stock / Small Air</li>
-      <li>Case: Mini ITX</li>
-      <li>Notes: Basic work/office tasks, compact design</li>
-    </ul>
-    <div class="tier-select"><input type="checkbox" id="AeroMini"><label for="AeroMini"> Select AeroMini</label></div>
-  </div>
-
-  <div class="tier-card">
-    <h2>NovaMini</h2>
-    <ul>
-      <li>CPU: Intel Core i5-12400 / AMD Ryzen 5 5600</li>
-      <li>Motherboard: ASUS ProArt B660-I / MSI B550I</li>
-      <li>GPU: Integrated / RX 6500 XT</li>
-      <li>RAM: 16GB DDR4</li>
-      <li>Storage: 512GB SSD + 1TB HDD / 1TB SSD</li>
-      <li>PSU: 450W Bronze</li>
-      <li>Cooling: Air Cooler</li>
-      <li>Case: Mini ITX</li>
-      <li>Notes: Advanced office tasks, light multitasking, compact design</li>
-    </ul>
-    <div class="tier-select"><input type="checkbox" id="NovaMini"><label for="NovaMini"> Select NovaMini</label></div>
-  </div>
-
-  <div class="tier-card">
-    <h2>Striker Mini</h2>
-    <ul>
-      <li>CPU: Intel Core i5-13400 / AMD Ryzen 5 7600</li>
-      <li>Motherboard: ASUS TUF Z690-I / MSI B650I</li>
-      <li>GPU: GTX 1660 / RX 6600</li>
-      <li>RAM: 16GB DDR4</li>
-      <li>Storage: 1TB SSD / 1TB SSD + 1TB HDD</li>
-      <li>PSU: 500W Gold</li>
-      <li>Cooling: Small Air / AIO 240mm</li>
-      <li>Case: Mini ITX</li>
-      <li>Notes: Entry gaming, 1080p, small form factor</li>
-    </ul>
-    <div class="tier-select"><input type="checkbox" id="StrikerMini"><label for="StrikerMini"> Select Striker Mini</label></div>
-  </div>
-
-  <div class="tier-card">
-    <h2>Phantom Mini</h2>
-    <ul>
-      <li>CPU: Intel Core i7-13700KF / AMD Ryzen 7 7700X</li>
-      <li>Motherboard: ASUS ROG Z790-I / MSI X670I</li>
-      <li>GPU: RTX 3060 / RX 6700 XT</li>
-      <li>RAM: 32GB DDR5</li>
-      <li>Storage: 2TB SSD / 2TB SSD + 1TB HDD</li>
-      <li>PSU: 650W Gold</li>
-      <li>Cooling: AIO 240mm</li>
-      <li>Case: Mini ITX</li>
-      <li>Notes: High settings 1080p/1440p, compact gaming rig</li>
-    </ul>
-    <div class="tier-select"><input type="checkbox" id="PhantomMini"><label for="PhantomMini"> Select Phantom Mini</label></div>
-  </div>
-
-  <div class="tier-card">
-    <h2>Titan Mini</h2>
-    <ul>
-      <li>CPU: Intel Core i9-14900K / AMD Ryzen 9 7950X</li>
-      <li>Motherboard: ASUS ROG Maximus Z790-I / MSI MEG X670I</li>
-      <li>GPU: RTX 4080 / RX 7900 XT</li>
-      <li>RAM: 64GB DDR5</li>
-      <li>Storage: 4TB SSD / 4TB SSD + 2TB HDD</li>
-      <li>PSU: 850W Platinum</li>
-      <li>Cooling: AIO 360mm</li>
-      <li>Case: Mini ITX</li>
-      <li>Notes: Top-tier gaming, 1440p/4K, small footprint, premium build</li>
-    </ul>
-    <div class="tier-select"><input type="checkbox" id="TitanMini"><label for="TitanMini"> Select Titan Mini</label></div>
-  </div>
-
-</main>
+<a href="index.html" class="back-button">Back to Main Menu</a>
 
 <script>
-  const toggle = document.getElementById('themeToggle');
-  toggle.addEventListener('click', () => {
-    document.body.classList.toggle('dark-mode');
-    toggle.textContent = document.body.classList.contains('dark-mode') ? '☀️' : '🌙';
-  });
+    const toggleButton = document.getElementById('toggle-dark');
+    toggleButton.addEventListener('click', () => {
+        document.body.classList.toggle('dark-mode');
+    });
 </script>
-
 </body>
 </html>
