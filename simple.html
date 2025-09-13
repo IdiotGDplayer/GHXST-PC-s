@@ -101,4 +101,87 @@
     grid-column: 1/-1;
     font-size: 1.5rem;
     font-weight: bold;
-    margi
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    color: var(--accent);
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <a href="https://discord.gg/YOURDISCORD" target="_blank" class="discord-btn">Discord</a>
+  <span class="theme-toggle" id="themeToggle">🌙</span>
+</header>
+
+<main>
+  <div class="category">Gaming Builds</div>
+
+  <div class="tier-card">
+    <h2>AeroLite</h2>
+    <ul>
+      <li>CPU: Intel Pentium Gold G7400 / AMD Athlon 3000G</li>
+      <li>Motherboard: ASUS Prime H610M / ASRock A320M</li>
+      <li>GPU: Intel UHD 710 / Vega 3</li>
+      <li>RAM: 8GB DDR4</li>
+      <li>Storage: 256GB SSD</li>
+      <li>PSU: 400W Bronze</li>
+      <li>Cooling: Stock Cooler</li>
+      <li>Case: Mini Tower</li>
+      <li>Notes: Basic gaming, office tasks</li>
+    </ul>
+    <div class="tier-select">
+      <input type="checkbox" id="AeroLite"><label for="AeroLite"> Select AeroLite</label>
+    </div>
+  </div>
+
+  <div class="tier-card">
+    <h2>NovaCore</h2>
+    <ul>
+      <li>CPU: Intel Core i3-12100 / AMD Ryzen 3 4100</li>
+      <li>Motherboard: MSI B660M / ASUS Prime B450M</li>
+      <li>GPU: GTX 1050 / RX 6400</li>
+      <li>RAM: 8GB DDR4</li>
+      <li>Storage: 512GB SSD</li>
+      <li>PSU: 450W Bronze</li>
+      <li>Cooling: Stock or small air cooler</li>
+      <li>Case: Mini Tower</li>
+      <li>Notes: Smooth 1080p gaming</li>
+    </ul>
+    <div class="tier-select">
+      <input type="checkbox" id="NovaCore"><label for="NovaCore"> Select NovaCore</label>
+    </div>
+  </div>
+
+  <div class="tier-card">
+    <h2>Striker</h2>
+    <ul>
+      <li>CPU: Intel Core i5-12400 / AMD Ryzen 5 5600</li>
+      <li>Motherboard: MSI B660 / ASUS TUF B550</li>
+      <li>GPU: GTX 1660 / RX 6500 XT</li>
+      <li>RAM: 16GB DDR4</li>
+      <li>Storage: 1TB SSD</li>
+      <li>PSU: 500W Bronze</li>
+      <li>Cooling: Small Air Cooler</li>
+      <li>Case: Mid Tower</li>
+      <li>Notes: 1080p high settings</li>
+    </ul>
+    <div class="tier-select">
+      <input type="checkbox" id="Striker"><label for="Striker"> Select Striker</label>
+    </div>
+  </div>
+
+  <!-- Repeat cards for Phantom, Titan, Vanguard, Predator X, Legion Z, Dominion RX, Apex Nova -->
+
+</main>
+
+<script>
+  const toggle = document.getElementById('themeToggle');
+  toggle.addEventListener('click', () => {
+    document.body.classList.toggle('dark-mode');
+    toggle.textContent = document.body.classList.contains('dark-mode') ? '☀️' : '🌙';
+  });
+</script>
+
+</body>
+</html>
