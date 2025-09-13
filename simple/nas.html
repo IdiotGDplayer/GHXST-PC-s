@@ -1,133 +1,178 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>GHXST Simple NAS Systems</title>
+  <title>NAS – GHXST Lineup</title>
   <style>
     body {
       font-family: Arial, sans-serif;
-      background: #f2f6ff;
-      color: #222;
       margin: 0;
       padding: 0;
-      text-align: center;
+      background-color: #f5f7fa;
+      color: #222;
     }
     header {
-      padding: 30px;
-      font-size: 2.2rem;
-      font-weight: bold;
-      background: #0a3d62;
+      background-color: #2563eb;
       color: white;
+      padding: 1.5rem;
+      text-align: center;
+      font-size: 2rem;
+      font-weight: bold;
     }
     .container {
-      width: 90%;
       max-width: 1000px;
-      margin: 30px auto;
+      margin: 2rem auto;
+      padding: 1rem;
+    }
+    .card {
       background: white;
-      border-radius: 10px;
-      padding: 25px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      border-radius: 12px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      padding: 1.5rem;
+      margin-bottom: 2rem;
+      transition: transform 0.2s;
     }
-    h2 {
-      font-size: 1.8rem;
-      margin-bottom: 15px;
+    .card:hover {
+      transform: translateY(-4px);
     }
-    .tier {
-      border-bottom: 1px solid #ccc;
-      padding: 20px 0;
-      text-align: left;
+    .card h2 {
+      margin-top: 0;
+      color: #2563eb;
+      display: inline-block;
     }
-    .tier:last-child {
-      border-bottom: none;
+    .specs {
+      margin-top: 1rem;
+      padding-left: 1rem;
     }
-    .tier h3 {
-      margin-bottom: 10px;
-      font-size: 1.4rem;
-      color: #0a3d62;
+    .specs li {
+      margin: 0.3rem 0;
     }
-    ul {
-      list-style-type: none;
-      padding: 0;
-      margin: 0;
+    label {
+      font-size: 1.2rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
     }
-    li {
-      margin: 4px 0;
-      font-size: 1rem;
+    input[type="checkbox"] {
+      transform: scale(1.4);
     }
     .back-btn {
-      margin-top: 25px;
-      padding: 15px 25px;
-      background: #0a3d62;
+      display: inline-block;
+      margin: 1rem;
+      padding: 0.8rem 1.5rem;
+      background-color: #2563eb;
       color: white;
-      font-size: 1.2rem;
-      border: none;
-      border-radius: 8px;
-      cursor: pointer;
-      transition: background 0.3s, transform 0.2s;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: bold;
     }
     .back-btn:hover {
-      background: #07406d;
-      transform: scale(1.05);
+      background-color: #1e4db7;
     }
   </style>
 </head>
 <body>
-  <header>GHXST Simple NAS Systems</header>
+  <header>GHXST NAS Systems</header>
+  <a href="index.html" class="back-btn">← Back to Main</a>
 
   <div class="container">
-    <h2>Choose Your NAS Tier</h2>
-
-    <!-- Tier 1 -->
-    <div class="tier">
-      <h3>SpindleCore</h3>
-      <ul>
-        <li><b>CPU:</b> Intel Core i3-12100 / AMD Ryzen 3 4100</li>
-        <li><b>Motherboard:</b> ASUS Prime H610I / ASRock B450 Gaming-ITX</li>
-        <li><b>GPU:</b> Integrated / RX 6400</li>
-        <li><b>RAM:</b> 16GB DDR4</li>
-        <li><b>Storage:</b> 4TB SSD + 8TB HDD / 2TB SSD + 12TB HDD</li>
-        <li><b>PSU:</b> 450W Bronze</li>
-        <li><b>Cooling:</b> Stock / Small Air</li>
-        <li><b>Case:</b> Mini ITX</li>
-        <li><b>Notes:</b> Entry-level NAS, multiple drives, lots of SATA ports</li>
+    <!-- AeroNAS -->
+    <div class="card">
+      <label><input type="checkbox" value="AeroNAS"> <h2>AeroNAS</h2></label>
+      <ul class="specs">
+        <li><b>CPU:</b> Intel Celeron J4125</li>
+        <li><b>Motherboard:</b> Mini ITX NAS Board</li>
+        <li><b>RAM:</b> 4GB DDR4</li>
+        <li><b>Storage:</b> 2x 2TB HDD</li>
+        <li><b>Network:</b> 1GbE</li>
+        <li><b>PSU:</b> 150W</li>
+        <li><b>Cooling:</b> Fanless / Small Air</li>
+        <li><b>Case:</b> Mini Tower</li>
+        <li><b>Notes:</b> Home storage, lightweight NAS tasks</li>
       </ul>
     </div>
 
-    <!-- Tier 2 -->
-    <div class="tier">
-      <h3>DataForge NX</h3>
-      <ul>
-        <li><b>CPU:</b> Intel Core i5-12400 / AMD Ryzen 5 5600</li>
-        <li><b>Motherboard:</b> ASUS ProArt B660-I / MSI B550I</li>
-        <li><b>GPU:</b> Integrated / RTX 3060</li>
-        <li><b>RAM:</b> 32GB DDR4</li>
-        <li><b>Storage:</b> 8TB SSD + 16TB HDD / 12TB SSD + 12TB HDD</li>
-        <li><b>PSU:</b> 600W Gold</li>
+    <!-- NovaNAS -->
+    <div class="card">
+      <label><input type="checkbox" value="NovaNAS"> <h2>NovaNAS</h2></label>
+      <ul class="specs">
+        <li><b>CPU:</b> Intel Pentium Gold G7400</li>
+        <li><b>Motherboard:</b> Micro ATX NAS Board</li>
+        <li><b>RAM:</b> 8GB DDR4</li>
+        <li><b>Storage:</b> 4x 4TB HDD</li>
+        <li><b>Network:</b> 1GbE</li>
+        <li><b>PSU:</b> 300W</li>
         <li><b>Cooling:</b> Air Cooler</li>
-        <li><b>Case:</b> Mini ITX</li>
-        <li><b>Notes:</b> Mid-tier NAS, fast storage, multiple drives, RAID capable</li>
+        <li><b>Case:</b> Mini / Mid Tower</li>
+        <li><b>Notes:</b> Small business NAS, RAID support</li>
       </ul>
     </div>
 
-    <!-- Tier 3 -->
-    <div class="tier">
-      <h3>TitanVault</h3>
-      <ul>
-        <li><b>CPU:</b> Intel Core i7-13700KF / AMD Ryzen 7 7700X</li>
-        <li><b>Motherboard:</b> ASUS Pro WS Z790-I / MSI X670I</li>
-        <li><b>GPU:</b> Integrated / RTX 4070</li>
-        <li><b>RAM:</b> 64GB DDR5</li>
-        <li><b>Storage:</b> 16TB SSD + 32TB HDD / 24TB SSD + 24TB HDD</li>
-        <li><b>PSU:</b> 850W Platinum</li>
-        <li><b>Cooling:</b> AIO 240mm</li>
-        <li><b>Case:</b> Mini ITX</li>
-        <li><b>Notes:</b> Extreme NAS, maxed out storage, multiple SATA/SAS ports, workstation-grade performance</li>
+    <!-- StrikerNAS -->
+    <div class="card">
+      <label><input type="checkbox" value="StrikerNAS"> <h2>StrikerNAS</h2></label>
+      <ul class="specs">
+        <li><b>CPU:</b> Intel Core i3-12100</li>
+        <li><b>Motherboard:</b> Micro ATX</li>
+        <li><b>RAM:</b> 16GB DDR4</li>
+        <li><b>Storage:</b> 6x 4TB HDD + 1TB SSD Cache</li>
+        <li><b>Network:</b> 2x 1GbE / 10GbE optional</li>
+        <li><b>PSU:</b> 450W Bronze</li>
+        <li><b>Cooling:</b> Air / Small AIO</li>
+        <li><b>Case:</b> Mid Tower</li>
+        <li><b>Notes:</b> Small business, media streaming</li>
       </ul>
     </div>
 
-    <button class="back-btn" onclick="window.location.href='../index.html'">⬅ Back to Main</button>
+    <!-- PhantomNAS -->
+    <div class="card">
+      <label><input type="checkbox" value="PhantomNAS"> <h2>PhantomNAS</h2></label>
+      <ul class="specs">
+        <li><b>CPU:</b> Intel Core i5-13400</li>
+        <li><b>Motherboard:</b> Micro ATX / ATX</li>
+        <li><b>RAM:</b> 32GB DDR4</li>
+        <li><b>Storage:</b> 8x 8TB HDD + 2TB SSD Cache</li>
+        <li><b>Network:</b> 2x 10GbE</li>
+        <li><b>PSU:</b> 600W Gold</li>
+        <li><b>Cooling:</b> Air / Small AIO</li>
+        <li><b>Case:</b> Mid Tower</li>
+        <li><b>Notes:</b> Medium business NAS, virtualization ready</li>
+      </ul>
+    </div>
+
+    <!-- TitanNAS -->
+    <div class="card">
+      <label><input type="checkbox" value="TitanNAS"> <h2>TitanNAS</h2></label>
+      <ul class="specs">
+        <li><b>CPU:</b> Intel Xeon W-1390</li>
+        <li><b>Motherboard:</b> ATX Workstation / Server Board</li>
+        <li><b>RAM:</b> 64GB DDR4 ECC</li>
+        <li><b>Storage:</b> 12x 10TB HDD + 4TB SSD Cache</li>
+        <li><b>Network:</b> 4x 10GbE</li>
+        <li><b>PSU:</b> 800W Platinum</li>
+        <li><b>Cooling:</b> Air / Custom Loop</li>
+        <li><b>Case:</b> Full Tower</li>
+        <li><b>Notes:</b> Enterprise NAS, virtualization, RAID heavy</li>
+      </ul>
+    </div>
+
+    <!-- ApexNAS -->
+    <div class="card">
+      <label><input type="checkbox" value="ApexNAS"> <h2>ApexNAS</h2></label>
+      <ul class="specs">
+        <li><b>CPU:</b> Dual Intel Xeon / Dual AMD EPYC</li>
+        <li><b>Motherboard:</b> Dual Socket Server Board</li>
+        <li><b>RAM:</b> 256GB DDR5 ECC</li>
+        <li><b>Storage:</b> 24x 16TB HDD + 8TB NVMe SSD</li>
+        <li><b>Network:</b> 8x 10/25GbE</li>
+        <li><b>PSU:</b> 2000W Platinum</li>
+        <li><b>Cooling:</b> Full Custom Loop / Air</li>
+        <li><b>Case:</b> Rackmount / Super Tower</li>
+        <li><b>Notes:</b> Maximum enterprise NAS, virtualization, AI storage</li>
+      </ul>
+    </div>
+
   </div>
 </body>
 </html>
