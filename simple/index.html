@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GHXST Simple Builds</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(to right, #1e3c72, #2a5298);
+      color: white;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+    }
+    header {
+      font-size: 2.5rem;
+      font-weight: bold;
+      margin-bottom: 2rem;
+      text-align: center;
+    }
+    .buttons {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1.5rem;
+      width: 80%;
+      max-width: 900px;
+    }
+    .btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: white;
+      color: #1e3c72;
+      padding: 1.5rem;
+      border-radius: 12px;
+      font-size: 1.3rem;
+      font-weight: bold;
+      text-decoration: none;
+      transition: transform 0.2s, background 0.2s;
+      text-align: center;
+    }
+    .btn:hover {
+      transform: translateY(-4px);
+      background: #e5e5e5;
+    }
+    .back-btn {
+      margin-top: 2rem;
+      padding: 0.8rem 1.4rem;
+      background: #fff;
+      color: #1e3c72;
+      font-weight: bold;
+      border-radius: 8px;
+      text-decoration: none;
+      transition: background 0.2s;
+    }
+    .back-btn:hover {
+      background: #d1d1d1;
+    }
+  </style>
+</head>
+<body>
+  <header>GHXST Simple Builds</header>
+
+  <div class="buttons">
+    <a href="gaming.html" class="btn">🎮 Gaming PCs</a>
+    <a href="workstation.html" class="btn">💼 Workstations</a>
+    <a href="nas.html" class="btn">📦 NAS Systems</a>
+    <a href="slim.html" class="btn">💻 Slimline Mini-ITX PCs</a>
+  </div>
+
+  <a href="../index.html" class="back-btn">← Back to Main</a>
+</body>
+</html>
