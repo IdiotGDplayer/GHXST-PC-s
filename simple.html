@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>GHXST Simple Builds</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<h1>GHXST Simple Builds</h1>
+
+<table>
+<tr><th>Select</th><th>Tier Name</th><th>CPU / Motherboard / GPU / RAM / Storage / PSU / Cooling / Case</th></tr>
+
+<tr>
+<td><input type="checkbox" data-build="AeroLite / Intel Pentium Gold G7400 / ASUS Prime H610M / Intel UHD 710 / 8GB DDR4 / 256GB SSD / 400W Bronze / Stock Cooler / Mini Tower"></td>
+<td>AeroLite</td>
+<td>Intel Pentium Gold G7400 / ASUS Prime H610M / Intel UHD 710 / 8GB DDR4 / 256GB SSD / 400W Bronze / Stock Cooler / Mini Tower</td>
+</tr>
+
+<tr>
+<td><input type="checkbox" data-build="NovaCore / Intel Core i3-12100 / MSI B660M / GTX 1050 / 8GB DDR4 / 512GB SSD / 450W Bronze / Stock or small air cooler / Mini Tower"></td>
+<td>NovaCore</td>
+<td>Intel Core i3-12100 / MSI B660M / GTX 1050 / 8GB DDR4 / 512GB SSD / 450W Bronze / Stock or small air cooler / Mini Tower</td>
+</tr>
+
+<tr>
+<td><input type="checkbox" data-build="Striker / Intel Core i5-12400 / MSI B660 / GTX 1660 / 16GB DDR4 / 1TB SSD / 500W Bronze / Small Air Cooler / Mid Tower"></td>
+<td>Striker</td>
+<td>Intel Core i5-12400 / MSI B660 / GTX 1660 / 16GB DDR4 / 1TB SSD / 500W Bronze / Small Air Cooler / Mid Tower</td>
+</tr>
+
+<tr>
+<td><input type="checkbox" data-build="Phantom / Intel Core i5-13600K / ASUS TUF Z690 / RTX 2060 / 16-32GB DDR4 / 1TB SSD + 1TB HDD / 600W Gold / Air Cooler / Mid Tower"></td>
+<td>Phantom</td>
+<td>Intel Core i5-13600K / ASUS TUF Z690 / RTX 2060 / 16-32GB DDR4 / 1TB SSD + 1TB HDD / 600W Gold / Air Cooler / Mid Tower</td>
+</tr>
+
+<tr>
+<td><input type="checkbox" data-build="Titan / Intel Core i7-13700KF / ASUS ROG Strix Z790 / RTX 3060 / 32GB DDR5 / 2TB SSD / 650W Gold / Air / AIO 240mm / Mid / Large Tower"></td>
+<td>Titan</td>
+<td>Intel Core i7-13700KF / ASUS ROG Strix Z790 / RTX 3060 / 32GB DDR5 / 2TB SSD / 650W Gold / Air / AIO 240mm / Mid / Large Tower</td>
+</tr>
+
+<tr>
+<td><input type="checkbox" data-build="Vanguard / Intel Core i7-14700K / ASUS ROG Strix Z790 / RTX 3070 / 32-64GB DDR5 / 2TB SSD + 2TB HDD / 750W Gold / AIO 240-280mm / Large Tower"></td>
+<td>Vanguard</td>
+<td>Intel Core i7-14700K / ASUS ROG Strix Z790 / RTX 3070 / 32-64GB DDR5 / 2TB SSD + 2TB HDD / 750W Gold / AIO 240-280mm / Large Tower</td>
+</tr>
+
+<tr>
+<td><input type="checkbox" data-build="Predator X / Intel Core i9-14900KF / ASUS ROG Maximus Z790 / RTX 4080 / 64GB DDR5 / 4TB SSD / 850W Platinum / AIO 360mm / Full Tower"></td>
+<td>Predator X</td>
+<td>Intel Core i9-14900KF / ASUS ROG Maximus Z790 / RTX 4080 / 64GB DDR5 / 4TB SSD / 850W Platinum / AIO 360mm / Full Tower</td>
+</tr>
+
+<tr>
+<td><input type="checkbox" data-build="Legion Z / Intel Core i9-14900K / ASUS ROG Maximus Z790 / RTX 4090 / 128GB DDR5 / 4TB SSD + 2TB HDD / 1000W Platinum / Custom Loop / Super Tower"></td>
+<td>Legion Z</td>
+<td>Intel Core i9-14900K / ASUS ROG Maximus Z790 / RTX 4090 / 128GB DDR5 / 4TB SSD + 2TB HDD / 1000W Platinum / Custom Loop / Super Tower</td>
+</tr>
+
+<tr>
+<td><input type="checkbox" data-build="Dominion RX / Intel Core i9-14900K / ASUS ROG Maximus Z790 / Dual RTX 4090 / 256GB DDR5 / 8TB SSD / 1500W Platinum / Custom Loop / Super Tower"></td>
+<td>Dominion RX</td>
+<td>Intel Core i9-14900K / ASUS ROG Maximus Z790 / Dual RTX 4090 / 256GB DDR5 / 8TB SSD / 1500W Platinum / Custom Loop / Super Tower</td>
+</tr>
+
+<tr>
+<td><input type="checkbox" data-build="Apex Nova / Intel Core i9-14900K / ASUS ROG Maximus Z790 / Quad RTX 4090 / 512GB DDR5 / 16TB SSD + 8TB HDD / 2500W Platinum / Full Custom Loop / Super Tower"></td>
+<td>Apex Nova</td>
+<td>Intel Core i9-14900K / ASUS ROG Maximus Z790 / Quad RTX 4090 / 512GB DDR5 / 16TB SSD + 8TB HDD / 2500W Platinum / Full Custom Loop / Super Tower</td>
+</tr>
+
+</table>
+
+<h3>Selected Builds:</h3>
+<div id="summary"></div>
+
+<button onclick="sendToDiscord()">Send Selected to Discord</button>
+<script src="script.js"></script>
+</body>
+</html>
