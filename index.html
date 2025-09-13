@@ -3,57 +3,120 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>GHXST Simple Builds</title>
+  <title>GHXST PC Configurator</title>
   <style>
     body {
       font-family: Arial, sans-serif;
-      background: #f2f6ff;
-      color: #222;
       margin: 0;
       padding: 0;
-      text-align: center;
-    }
-    header {
-      padding: 30px;
-      font-size: 2.2rem;
-      font-weight: bold;
-      background: #0a3d62;
+      background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
       color: white;
-    }
-    .menu {
       display: flex;
       flex-direction: column;
       align-items: center;
-      margin-top: 40px;
+      justify-content: center;
+      min-height: 100vh;
     }
-    button {
-      width: 280px;
-      margin: 15px;
-      padding: 20px;
-      font-size: 1.3rem;
+    header {
+      font-size: 3rem;
       font-weight: bold;
-      background: #0a3d62;
-      color: white;
-      border: none;
-      border-radius: 10px;
-      cursor: pointer;
-      transition: background 0.3s, transform 0.2s;
+      margin-bottom: 2rem;
+      text-align: center;
     }
-    button:hover {
-      background: #07406d;
-      transform: scale(1.05);
+    .buttons {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
+      width: 80%;
+      max-width: 1000px;
+    }
+    .btn {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      background: white;
+      color: #203a43;
+      padding: 2rem;
+      border-radius: 14px;
+      font-size: 1.6rem;
+      font-weight: bold;
+      text-decoration: none;
+      transition: transform 0.25s, background 0.25s;
+      text-align: center;
+      min-height: 150px;
+    }
+    .btn:hover {
+      transform: translateY(-6px);
+      background: #e5e5e5;
+    }
+    .desc {
+      margin-top: 1rem;
+      font-size: 1rem;
+      font-weight: normal;
+      color: #444;
+    }
+    .top-bar {
+      position: absolute;
+      top: 1rem;
+      left: 1rem;
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+    .top-bar a {
+      text-decoration: none;
+      color: white;
+      font-weight: bold;
+      background: #444;
+      padding: 0.5rem 1rem;
+      border-radius: 8px;
+      transition: background 0.2s;
+    }
+    .top-bar a:hover {
+      background: #666;
+    }
+    .mode-toggle {
+      cursor: pointer;
+      padding: 0.5rem 1rem;
+      background: #fff;
+      color: #203a43;
+      border-radius: 8px;
+      font-weight: bold;
+      transition: background 0.2s;
+    }
+    .mode-toggle:hover {
+      background: #ddd;
     }
   </style>
 </head>
 <body>
-  <header>GHXST Simple Builds</header>
-
-  <div class="menu">
-    <button onclick="window.location.href='simple/gaming.html'">🎮 Gaming PCs</button>
-    <button onclick="window.location.href='simple/servers.html'">🖥️ Workstations & Servers</button>
-    <button onclick="window.location.href='simple/nas.html'">📦 NAS Systems</button>
-    <button onclick="window.location.href='simple/mini.html'">💻 Slimline Mini PCs</button>
-    <button onclick="window.location.href='simple/professional.html'">🏢 Professional Lineup</button>
+  <div class="top-bar">
+    <a href="https://discord.gg/YOURDISCORD" target="_blank">Discord</a>
+    <div class="mode-toggle" onclick="toggleMode()">🌙 / ☀️</div>
   </div>
+
+  <header>Welcome to GHXST Configurator</header>
+
+  <div class="buttons">
+    <a href="simple/index.html" class="btn">
+      Simple
+      <span class="desc">Quick pre-made PCs sorted by category</span>
+    </a>
+    <a href="advanced.html" class="btn">
+      Advanced
+      <span class="desc">All available builds with extra options</span>
+    </a>
+    <a href="custom.html" class="btn">
+      Custom
+      <span class="desc">Fully modular, pick every part yourself</span>
+    </a>
+  </div>
+
+  <script>
+    function toggleMode() {
+      document.body.classList.toggle("dark");
+    }
+  </script>
 </body>
 </html>
