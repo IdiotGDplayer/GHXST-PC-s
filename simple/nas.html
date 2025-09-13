@@ -1,1 +1,133 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GHXST Simple NAS Systems</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f2f6ff;
+      color: #222;
+      margin: 0;
+      padding: 0;
+      text-align: center;
+    }
+    header {
+      padding: 30px;
+      font-size: 2.2rem;
+      font-weight: bold;
+      background: #0a3d62;
+      color: white;
+    }
+    .container {
+      width: 90%;
+      max-width: 1000px;
+      margin: 30px auto;
+      background: white;
+      border-radius: 10px;
+      padding: 25px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+    h2 {
+      font-size: 1.8rem;
+      margin-bottom: 15px;
+    }
+    .tier {
+      border-bottom: 1px solid #ccc;
+      padding: 20px 0;
+      text-align: left;
+    }
+    .tier:last-child {
+      border-bottom: none;
+    }
+    .tier h3 {
+      margin-bottom: 10px;
+      font-size: 1.4rem;
+      color: #0a3d62;
+    }
+    ul {
+      list-style-type: none;
+      padding: 0;
+      margin: 0;
+    }
+    li {
+      margin: 4px 0;
+      font-size: 1rem;
+    }
+    .back-btn {
+      margin-top: 25px;
+      padding: 15px 25px;
+      background: #0a3d62;
+      color: white;
+      font-size: 1.2rem;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background 0.3s, transform 0.2s;
+    }
+    .back-btn:hover {
+      background: #07406d;
+      transform: scale(1.05);
+    }
+  </style>
+</head>
+<body>
+  <header>GHXST Simple NAS Systems</header>
+
+  <div class="container">
+    <h2>Choose Your NAS Tier</h2>
+
+    <!-- Tier 1 -->
+    <div class="tier">
+      <h3>SpindleCore</h3>
+      <ul>
+        <li><b>CPU:</b> Intel Core i3-12100 / AMD Ryzen 3 4100</li>
+        <li><b>Motherboard:</b> ASUS Prime H610I / ASRock B450 Gaming-ITX</li>
+        <li><b>GPU:</b> Integrated / RX 6400</li>
+        <li><b>RAM:</b> 16GB DDR4</li>
+        <li><b>Storage:</b> 4TB SSD + 8TB HDD / 2TB SSD + 12TB HDD</li>
+        <li><b>PSU:</b> 450W Bronze</li>
+        <li><b>Cooling:</b> Stock / Small Air</li>
+        <li><b>Case:</b> Mini ITX</li>
+        <li><b>Notes:</b> Entry-level NAS, multiple drives, lots of SATA ports</li>
+      </ul>
+    </div>
+
+    <!-- Tier 2 -->
+    <div class="tier">
+      <h3>DataForge NX</h3>
+      <ul>
+        <li><b>CPU:</b> Intel Core i5-12400 / AMD Ryzen 5 5600</li>
+        <li><b>Motherboard:</b> ASUS ProArt B660-I / MSI B550I</li>
+        <li><b>GPU:</b> Integrated / RTX 3060</li>
+        <li><b>RAM:</b> 32GB DDR4</li>
+        <li><b>Storage:</b> 8TB SSD + 16TB HDD / 12TB SSD + 12TB HDD</li>
+        <li><b>PSU:</b> 600W Gold</li>
+        <li><b>Cooling:</b> Air Cooler</li>
+        <li><b>Case:</b> Mini ITX</li>
+        <li><b>Notes:</b> Mid-tier NAS, fast storage, multiple drives, RAID capable</li>
+      </ul>
+    </div>
+
+    <!-- Tier 3 -->
+    <div class="tier">
+      <h3>TitanVault</h3>
+      <ul>
+        <li><b>CPU:</b> Intel Core i7-13700KF / AMD Ryzen 7 7700X</li>
+        <li><b>Motherboard:</b> ASUS Pro WS Z790-I / MSI X670I</li>
+        <li><b>GPU:</b> Integrated / RTX 4070</li>
+        <li><b>RAM:</b> 64GB DDR5</li>
+        <li><b>Storage:</b> 16TB SSD + 32TB HDD / 24TB SSD + 24TB HDD</li>
+        <li><b>PSU:</b> 850W Platinum</li>
+        <li><b>Cooling:</b> AIO 240mm</li>
+        <li><b>Case:</b> Mini ITX</li>
+        <li><b>Notes:</b> Extreme NAS, maxed out storage, multiple SATA/SAS ports, workstation-grade performance</li>
+      </ul>
+    </div>
+
+    <button class="back-btn" onclick="window.location.href='../index.html'">⬅ Back to Main</button>
+  </div>
+</body>
+</html>
