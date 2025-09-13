@@ -3,39 +3,57 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>GHXST Builds</title>
-  <link rel="stylesheet" href="style.css">
+  <title>GHXST Simple Builds</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f2f6ff;
+      color: #222;
+      margin: 0;
+      padding: 0;
+      text-align: center;
+    }
+    header {
+      padding: 30px;
+      font-size: 2.2rem;
+      font-weight: bold;
+      background: #0a3d62;
+      color: white;
+    }
+    .menu {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-top: 40px;
+    }
+    button {
+      width: 280px;
+      margin: 15px;
+      padding: 20px;
+      font-size: 1.3rem;
+      font-weight: bold;
+      background: #0a3d62;
+      color: white;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: background 0.3s, transform 0.2s;
+    }
+    button:hover {
+      background: #07406d;
+      transform: scale(1.05);
+    }
+  </style>
 </head>
 <body>
-  <header>
-    <div class="top-left">
-      <a href="https://discord.gg/yourserver" target="_blank" class="discord-btn">
-        <img src="assets/discord.svg" alt="Discord">
-      </a>
-      <button id="theme-toggle">
-        <img id="theme-icon" src="assets/sun.svg" alt="Toggle Theme">
-      </button>
-    </div>
-    <h1>GHXST Builds</h1>
-  </header>
+  <header>GHXST Simple Builds</header>
 
-  <main>
-    <div class="mode-buttons">
-      <a href="simple.html" class="mode-btn">
-        <h2>Simple</h2>
-        <p>Pick a preconfigured PC per tier. Fast and easy.</p>
-      </a>
-      <a href="advanced.html" class="mode-btn">
-        <h2>Advanced</h2>
-        <p>Choose from all PCs per tier. Optional parts get extra checkboxes.</p>
-      </a>
-      <a href="custom.html" class="mode-btn">
-        <h2>Custom</h2>
-        <p>Fully modular. Select exactly what you want.</p>
-      </a>
-    </div>
-  </main>
-
-  <script src="script.js"></script>
+  <div class="menu">
+    <button onclick="window.location.href='simple/gaming.html'">🎮 Gaming PCs</button>
+    <button onclick="window.location.href='simple/servers.html'">🖥️ Workstations & Servers</button>
+    <button onclick="window.location.href='simple/nas.html'">📦 NAS Systems</button>
+    <button onclick="window.location.href='simple/mini.html'">💻 Slimline Mini PCs</button>
+    <button onclick="window.location.href='simple/professional.html'">🏢 Professional Lineup</button>
+  </div>
 </body>
 </html>
