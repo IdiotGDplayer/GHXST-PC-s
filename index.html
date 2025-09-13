@@ -3,120 +3,70 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>GHXST PC Configurator</title>
+  <title>GHXST PC'sr</title>
   <style>
     body {
-      font-family: Arial, sans-serif;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f5f5f5;
+      color: #222;
       margin: 0;
-      padding: 0;
-      background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
-      color: white;
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
       min-height: 100vh;
     }
-    header {
-      font-size: 3rem;
-      font-weight: bold;
-      margin-bottom: 2rem;
+    h1 {
+      font-size: 3em;
+      margin-bottom: 40px;
       text-align: center;
     }
-    .buttons {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 2rem;
-      width: 80%;
-      max-width: 1000px;
-    }
-    .btn {
+    .button-container {
       display: flex;
       flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      background: white;
-      color: #203a43;
-      padding: 2rem;
-      border-radius: 14px;
-      font-size: 1.6rem;
-      font-weight: bold;
-      text-decoration: none;
-      transition: transform 0.25s, background 0.25s;
-      text-align: center;
-      min-height: 150px;
+      gap: 25px;
+      width: 80%;
+      max-width: 600px;
     }
-    .btn:hover {
-      transform: translateY(-6px);
-      background: #e5e5e5;
-    }
-    .desc {
-      margin-top: 1rem;
-      font-size: 1rem;
-      font-weight: normal;
-      color: #444;
-    }
-    .top-bar {
-      position: absolute;
-      top: 1rem;
-      left: 1rem;
-      display: flex;
-      align-items: center;
-      gap: 1rem;
-    }
-    .top-bar a {
-      text-decoration: none;
+    .main-button {
+      background-color: #007BFF;
       color: white;
+      padding: 25px;
+      font-size: 1.8em;
       font-weight: bold;
-      background: #444;
-      padding: 0.5rem 1rem;
-      border-radius: 8px;
-      transition: background 0.2s;
-    }
-    .top-bar a:hover {
-      background: #666;
-    }
-    .mode-toggle {
+      border: none;
+      border-radius: 12px;
       cursor: pointer;
-      padding: 0.5rem 1rem;
-      background: #fff;
-      color: #203a43;
-      border-radius: 8px;
-      font-weight: bold;
-      transition: background 0.2s;
+      transition: background 0.3s, transform 0.2s;
+      width: 100%;
     }
-    .mode-toggle:hover {
-      background: #ddd;
+    .main-button:hover {
+      background-color: #0056b3;
+      transform: scale(1.05);
+    }
+    .description {
+      font-size: 1.1em;
+      color: #555;
+      text-align: center;
+      margin-top: 5px;
     }
   </style>
 </head>
 <body>
-  <div class="top-bar">
-    <a href="https://discord.gg/YOURDISCORD" target="_blank">Discord</a>
-    <div class="mode-toggle" onclick="toggleMode()">🌙 / ☀️</div>
+  <h1>GHXST PC Builder</h1>
+  <div class="button-container">
+    <div>
+      <button class="main-button" onclick="location.href='simple/index.html'">Simple</button>
+      <div class="description">Choose from pre-built PCs by category: Gaming, Workstation, NAS, Mini-ITX.</div>
+    </div>
+    <div>
+      <button class="main-button" onclick="location.href='advanced/index.html'">Advanced</button>
+      <div class="description">Pick from a full lineup with all options visible, including optional components.</div>
+    </div>
+    <div>
+      <button class="main-button" onclick="location.href='custom/index.html'">Custom</button>
+      <div class="description">Fully modular. Select every part individually for a truly custom build.</div>
+    </div>
   </div>
-
-  <header>Welcome to GHXST Configurator</header>
-
-  <div class="buttons">
-    <a href="simple/index.html" class="btn">
-      Simple
-      <span class="desc">Quick pre-made PCs sorted by category</span>
-    </a>
-    <a href="advanced.html" class="btn">
-      Advanced
-      <span class="desc">All available builds with extra options</span>
-    </a>
-    <a href="custom.html" class="btn">
-      Custom
-      <span class="desc">Fully modular, pick every part yourself</span>
-    </a>
-  </div>
-
-  <script>
-    function toggleMode() {
-      document.body.classList.toggle("dark");
-    }
-  </script>
 </body>
 </html>
