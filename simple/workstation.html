@@ -3,130 +3,175 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>GHXST Simple Workstations</title>
+  <title>Workstations – GHXST Lineup</title>
   <style>
     body {
       font-family: Arial, sans-serif;
-      background: #f4f8ff;
-      color: #222;
       margin: 0;
       padding: 0;
-      text-align: center;
+      background-color: #f5f7fa;
+      color: #222;
     }
     header {
-      padding: 30px;
-      font-size: 2.2rem;
-      font-weight: bold;
-      background: #2d3436;
+      background-color: #2563eb;
       color: white;
+      padding: 1.5rem;
+      text-align: center;
+      font-size: 2rem;
+      font-weight: bold;
     }
     .container {
-      width: 90%;
       max-width: 1000px;
-      margin: 30px auto;
+      margin: 2rem auto;
+      padding: 1rem;
+    }
+    .card {
       background: white;
-      border-radius: 10px;
-      padding: 25px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      border-radius: 12px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      padding: 1.5rem;
+      margin-bottom: 2rem;
+      transition: transform 0.2s;
     }
-    h2 {
-      font-size: 1.8rem;
-      margin-bottom: 15px;
+    .card:hover {
+      transform: translateY(-4px);
     }
-    .tier {
-      border-bottom: 1px solid #ccc;
-      padding: 20px 0;
-      text-align: left;
+    .card h2 {
+      margin-top: 0;
+      color: #2563eb;
+      display: inline-block;
     }
-    .tier:last-child {
-      border-bottom: none;
+    .specs {
+      margin-top: 1rem;
+      padding-left: 1rem;
     }
-    .tier h3 {
-      margin-bottom: 10px;
-      font-size: 1.4rem;
-      color: #2d3436;
+    .specs li {
+      margin: 0.3rem 0;
     }
-    ul {
-      list-style-type: none;
-      padding: 0;
-      margin: 0;
+    label {
+      font-size: 1.2rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
     }
-    li {
-      margin: 4px 0;
-      font-size: 1rem;
+    input[type="checkbox"] {
+      transform: scale(1.4);
     }
     .back-btn {
-      margin-top: 25px;
-      padding: 15px 25px;
-      background: #2d3436;
+      display: inline-block;
+      margin: 1rem;
+      padding: 0.8rem 1.5rem;
+      background-color: #2563eb;
       color: white;
-      font-size: 1.2rem;
-      border: none;
-      border-radius: 8px;
-      cursor: pointer;
-      transition: background 0.3s, transform 0.2s;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: bold;
     }
     .back-btn:hover {
-      background: #000;
-      transform: scale(1.05);
+      background-color: #1e4db7;
     }
   </style>
 </head>
 <body>
-  <header>GHXST Simple Workstations</header>
+  <header>GHXST Workstations</header>
+  <a href="index.html" class="back-btn">← Back to Main</a>
 
   <div class="container">
-    <h2>Choose Your Workstation Tier</h2>
-
-    <!-- Tier 1 -->
-    <div class="tier">
-      <h3>CreatorLite</h3>
-      <ul>
-        <li><b>CPU:</b> Intel Core i5-13400 / AMD Ryzen 5 7600</li>
-        <li><b>Motherboard:</b> ASUS B760-Plus / MSI B650M Pro</li>
-        <li><b>GPU:</b> NVIDIA RTX 3060 Ti / Radeon RX 6750 XT</li>
-        <li><b>RAM:</b> 32GB DDR5</li>
-        <li><b>Storage:</b> 1TB NVMe SSD + 2TB HDD</li>
-        <li><b>PSU:</b> 650W Gold</li>
-        <li><b>Cooling:</b> Tower Air Cooler</li>
-        <li><b>Case:</b> Mid-Tower ATX</li>
-        <li><b>Notes:</b> Best for entry-level content creation, video editing, 3D modeling basics</li>
+    <!-- AeroWork -->
+    <div class="card">
+      <label><input type="checkbox" value="AeroWork"> <h2>AeroWork</h2></label>
+      <ul class="specs">
+        <li><b>CPU:</b> Intel Core i5-12400 / AMD Ryzen 5 5600</li>
+        <li><b>Motherboard:</b> ASUS Pro B660M / MSI B550M</li>
+        <li><b>GPU:</b> Integrated / RX 6500 XT</li>
+        <li><b>RAM:</b> 16GB DDR4</li>
+        <li><b>Storage:</b> 512GB SSD</li>
+        <li><b>PSU:</b> 450W Bronze</li>
+        <li><b>Cooling:</b> Air Cooler</li>
+        <li><b>Case:</b> Mini Tower</li>
+        <li><b>Notes:</b> Light office, multitasking, small form factor</li>
       </ul>
     </div>
 
-    <!-- Tier 2 -->
-    <div class="tier">
-      <h3>RenderPro</h3>
-      <ul>
-        <li><b>CPU:</b> Intel Core i9-13900K / AMD Ryzen 9 7900X</li>
-        <li><b>Motherboard:</b> ASUS Z790 ProArt / Gigabyte X670 Aorus Elite</li>
-        <li><b>GPU:</b> NVIDIA RTX 4080 / Radeon RX 7900 XT</li>
+    <!-- NovaWork -->
+    <div class="card">
+      <label><input type="checkbox" value="NovaWork"> <h2>NovaWork</h2></label>
+      <ul class="specs">
+        <li><b>CPU:</b> Intel Core i7-12700 / AMD Ryzen 7 5800</li>
+        <li><b>Motherboard:</b> ASUS ProArt Z690 / MSI B650</li>
+        <li><b>GPU:</b> RTX 3050 / RX 6600</li>
+        <li><b>RAM:</b> 32GB DDR4</li>
+        <li><b>Storage:</b> 1TB SSD + 2TB HDD</li>
+        <li><b>PSU:</b> 600W Gold</li>
+        <li><b>Cooling:</b> Air / Small AIO</li>
+        <li><b>Case:</b> Mid Tower</li>
+        <li><b>Notes:</b> Content creation, moderate rendering, smooth multitasking</li>
+      </ul>
+    </div>
+
+    <!-- StrikerWork -->
+    <div class="card">
+      <label><input type="checkbox" value="StrikerWork"> <h2>StrikerWork</h2></label>
+      <ul class="specs">
+        <li><b>CPU:</b> Intel Core i9-13900 / AMD Ryzen 9 7900</li>
+        <li><b>Motherboard:</b> ASUS ROG Z790 / MSI X670</li>
+        <li><b>GPU:</b> RTX 4070 / RX 7800 XT</li>
         <li><b>RAM:</b> 64GB DDR5</li>
-        <li><b>Storage:</b> 2TB NVMe Gen4 SSD + 4TB HDD</li>
-        <li><b>PSU:</b> 850W Platinum</li>
-        <li><b>Cooling:</b> 280mm AIO Liquid Cooler</li>
-        <li><b>Case:</b> ATX Full Tower</li>
-        <li><b>Notes:</b> Perfect for professional creators, heavy rendering, large projects</li>
+        <li><b>Storage:</b> 2TB SSD + 4TB HDD</li>
+        <li><b>PSU:</b> 750W Gold</li>
+        <li><b>Cooling:</b> AIO 240mm</li>
+        <li><b>Case:</b> Mid / Large Tower</li>
+        <li><b>Notes:</b> Heavy content creation, 3D rendering</li>
       </ul>
     </div>
 
-    <!-- Tier 3 -->
-    <div class="tier">
-      <h3>TitanCreator X</h3>
-      <ul>
-        <li><b>CPU:</b> AMD Threadripper PRO 5975WX / Intel Xeon W-3400</li>
-        <li><b>Motherboard:</b> ASUS Pro WS WRX80E-SAGE / Supermicro W790</li>
-        <li><b>GPU:</b> NVIDIA RTX 4090 / Dual RTX A6000 (optional)</li>
-        <li><b>RAM:</b> 128GB DDR5 ECC (expandable to 512GB)</li>
-        <li><b>Storage:</b> 4TB NVMe Gen5 SSD + 16TB Enterprise HDD</li>
-        <li><b>PSU:</b> 1200W Titanium</li>
-        <li><b>Cooling:</b> Custom Water Loop / 360mm AIO</li>
-        <li><b>Case:</b> Full Tower Workstation Chassis</li>
-        <li><b>Notes:</b> The ultimate workstation for film studios, AI training, extreme workloads</li>
+    <!-- PhantomWork -->
+    <div class="card">
+      <label><input type="checkbox" value="PhantomWork"> <h2>PhantomWork</h2></label>
+      <ul class="specs">
+        <li><b>CPU:</b> Intel Xeon W-1350 / AMD Threadripper 3950X</li>
+        <li><b>Motherboard:</b> ASUS WS / MSI Creator</li>
+        <li><b>GPU:</b> RTX 4070 Ti / RTX A2000</li>
+        <li><b>RAM:</b> 128GB DDR4/DDR5</li>
+        <li><b>Storage:</b> 4TB SSD + 8TB HDD</li>
+        <li><b>PSU:</b> 1000W Platinum</li>
+        <li><b>Cooling:</b> Custom Loop / AIO</li>
+        <li><b>Case:</b> Full Tower</li>
+        <li><b>Notes:</b> Extreme multitasking, video editing, simulations</li>
       </ul>
     </div>
 
-    <button class="back-btn" onclick="window.location.href='../index.html'">⬅ Back to Main</button>
+    <!-- TitanWork -->
+    <div class="card">
+      <label><input type="checkbox" value="TitanWork"> <h2>TitanWork</h2></label>
+      <ul class="specs">
+        <li><b>CPU:</b> Intel Xeon W-3390 / AMD Threadripper Pro 5995WX</li>
+        <li><b>Motherboard:</b> ASUS WS / MSI MEG WS</li>
+        <li><b>GPU:</b> Dual RTX A6000 / Dual RX 7900 XTX</li>
+        <li><b>RAM:</b> 256GB DDR5 ECC</li>
+        <li><b>Storage:</b> 8TB NVMe SSD + 16TB HDD</li>
+        <li><b>PSU:</b> 1600W Platinum</li>
+        <li><b>Cooling:</b> Custom Loop</li>
+        <li><b>Case:</b> Super Tower</li>
+        <li><b>Notes:</b> Professional workloads, simulations, multi-GPU tasks</li>
+      </ul>
+    </div>
+
+    <!-- ApexWork -->
+    <div class="card">
+      <label><input type="checkbox" value="ApexWork"> <h2>ApexWork</h2></label>
+      <ul class="specs">
+        <li><b>CPU:</b> Dual Intel Xeon / Dual Threadripper Pro</li>
+        <li><b>Motherboard:</b> ASUS WS / MSI MEG WS</li>
+        <li><b>GPU:</b> Quad RTX A6000 / Quad RX 7900 XTX</li>
+        <li><b>RAM:</b> 512GB DDR5 ECC</li>
+        <li><b>Storage:</b> 32TB NVMe SSD</li>
+        <li><b>PSU:</b> 2500W Platinum</li>
+        <li><b>Cooling:</b> Full Custom Loop</li>
+        <li><b>Case:</b> Super Tower</li>
+        <li><b>Notes:</b> Maximum workstation, simulations, AI, rendering farms</li>
+      </ul>
+    </div>
   </div>
 </body>
 </html>
