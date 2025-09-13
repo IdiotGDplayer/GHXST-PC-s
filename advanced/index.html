@@ -46,6 +46,28 @@
       margin: 0;
       color: #2563eb;
     }
+
+    /* Back button style */
+    .back-btn {
+      display: block;
+      margin: 50px auto;
+      background-color: #6c757d;
+      color: white;
+      padding: 15px 30px;
+      font-size: 1.2em;
+      font-weight: bold;
+      border: none;
+      border-radius: 10px;
+      text-align: center;
+      width: fit-content;
+      cursor: pointer;
+      transition: background 0.3s, transform 0.2s;
+      text-decoration: none;
+    }
+    .back-btn:hover {
+      background-color: #495057;
+      transform: scale(1.05);
+    }
   </style>
 </head>
 <body>
@@ -89,6 +111,8 @@
       <p>Pinnacle builds: extreme gaming & content creation</p>
     </a>
   </div>
-<a href="index.html" class="back-btn">← Back to Main</a>
+
+  <!-- Centered Back Button -->
+  <a href="index.html" class="back-btn">← Back to Main</a>
 </body>
 </html>
