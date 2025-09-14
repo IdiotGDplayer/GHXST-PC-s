@@ -10,3 +10,9 @@ themeToggle.addEventListener('click', () => {
     themeIcon.src = 'assets/sun.svg';
   }
 });
+(function() {
+  const link = document.createElement('link');
+  link.rel = 'stylesheet';
+  link.href = '/GHXST-PC-s/darktheme.css'; // Use absolute path from the root
+  document.head.appendChild(link);
+})();
