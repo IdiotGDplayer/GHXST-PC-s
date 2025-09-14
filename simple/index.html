@@ -70,36 +70,3 @@
   </style>
 </head>
 <body>
-  <h1>Simple Builds - Select a PC Category</h1>
-
-  <div class="button-container">
-    <div>
-      <button class="category-button" onclick="location.href='gaming.html'">Gaming PCs</button>
-      <div class="description">Choose from our 10 pre-configured gaming tiers.</div>
-    </div>
-    <div>
-      <button class="category-button" onclick="location.href='workstation.html'">Workstations</button>
-      <div class="description">High-performance PCs for office and creative work.</div>
-    </div>
-    <div>
-      <button class="category-button" onclick="location.href='nas.html'">NAS Systems</button>
-      <div class="description">Network storage solutions for home or enterprise use.</div>
-    </div>
-    <div>
-      <button class="category-button" onclick="location.href='minitx.html'">Mini-ITX / Slimline</button>
-      <div class="description">Compact PCs with small footprints for home or office.</div>
-    </div>
-  </div>
-
-  <button class="back-button" onclick="location.href='../index.html'">← Back to Main Page</button>
-
-  <script>
-    // Apply saved theme only (no toggle here)
-    let savedTheme = localStorage.getItem('ghxst-theme') || 'light';
-    if(savedTheme === 'dark') {
-      document.body.style.backgroundColor = '#1a1a1a';
-      document.body.style.color = '#f5f5f5';
-    }
-  </script>
-</body>
-</html>
