@@ -190,16 +190,22 @@ sendBtn.addEventListener("click", () => {
   document.querySelectorAll(".card input[type='checkbox']:checked").forEach(cb => {
     const card = cb.closest(".card");
     const name = cb.value;
-    const specs = Array.from(card.querySelectorAll(".specs li")).map(li => li.textContent.replace(/^\*\*|\*\*/g,''));
+    const specsList = Array.from(card.querySelectorAll(".specs li"));
+    const specs = {};
+    specsList.forEach(li => {
+      const [key, ...rest] = li.textContent.split(':');
+      specs[key.trim().toLowerCase()] = rest.join(':').trim();
+    });
+
     selectedPCs.push({
       name,
-      cpu: specs[0] || "",
-      motherboard: specs[1] || "",
-      ram: specs[2] || "",
-      gpu: specs[3] || "",
-      storage: specs[4] || "",
-      psu: specs[5] || "",
-      cooler: specs[6] || ""
+      cpu: specs['cpu'] || "",
+      motherboard: specs['motherboard'] || "",
+      ram: specs['ram'] || "",
+      gpu: specs['gpu'] || "",       // empty for NAS builds
+      storage: specs['storage'] || "",
+      psu: specs['psu'] || "",
+      cooler: specs['cooling'] || ""
     });
   });
 
@@ -230,3 +236,4 @@ sendBtn.addEventListener("click", () => {
   .catch(err => console.error(err));
 });
 </script>
+
