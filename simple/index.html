@@ -21,7 +21,7 @@
       font-size: 2.5em;
       margin-bottom: 40px;
       text-align: center;
-      color: #2563eb; /* GSs blue heading */
+      color: #2563eb; /* GSs heading blue */
     }
 
     .button-container {
@@ -38,19 +38,18 @@
       flex-direction: column;
       align-items: center;
       justify-content: space-between;
-      flex: 1 1 240px; /* GSs min card width */
+      flex: 1 1 240px; /* GSs card width */
       min-height: 180px;
       text-align: center;
       padding: 2rem; /* GSs card padding */
-      background: white; /* GSs card background */
-      border-radius: 12px; /* GSs card radius */
-      box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* GSs card shadow */
-      transition: transform 0.2s, box-shadow 0.2s;
+      background: #f5f7fa; /* Match page background */
+      border-radius: 12px;
+      box-shadow: none; /* No shadow since cards blend into background */
+      transition: transform 0.2s;
     }
 
     .button-card:hover {
       transform: translateY(-4px);
-      box-shadow: 0 6px 12px rgba(0,0,0,0.15);
     }
 
     .category-button {
