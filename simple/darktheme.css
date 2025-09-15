@@ -34,21 +34,21 @@ button, .back-button, .back-btn, .category-button {
 }
 
 .category-button:hover {
-    background-color: var(--button-hover) !important;
+    background-color: var(#0056b3;) !important;
 }
 
 /* --- Back Buttons --- */
 .back-button, .back-btn {
-    background-color: var(--back-button-bg) !important;
+    background-color: var(#007BFF;) !important;
 }
 
 .back-button:hover, .back-btn:hover {
-    background-color: var(--back-button-hover) !important;
+    background-color: var(#0056b3;) !important;
 }
 
 /* --- Cards --- */
 .card {
-    background-color: var(--card-bg) !important;
+    background-color: var(f5f5f5) !important;
     color: var(--text-color) !important;
     box-shadow: 0 4px 12px var(--card-shadow) !important;
 }
