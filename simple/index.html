@@ -8,7 +8,7 @@
   <style>
     body {
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background-color: #f5f7fa; /* GSs page background */
+      background-color: #f5f7fa;
       color: #222;
       margin: 0;
       display: flex;
@@ -21,16 +21,16 @@
       font-size: 2.5em;
       margin-bottom: 40px;
       text-align: center;
-      color: #2563eb; /* GSs heading blue */
+      color: #2563eb;
     }
 
     .button-container {
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
-      gap: 1.5rem; /* GSs spacing */
+      gap: 1.5rem;
       width: 100%;
-      max-width: 1200px; /* GSs container width */
+      max-width: 1200px;
     }
 
     .button-card {
@@ -38,22 +38,23 @@
       flex-direction: column;
       align-items: center;
       justify-content: space-between;
-      flex: 1 1 240px; /* GSs card width */
+      flex: 1 1 240px;
       min-height: 180px;
       text-align: center;
-      padding: 2rem; /* GSs padding */
-      background: #f5f7fa; /* Same as page background, removes white block */
+      padding: 2rem;
+      background: #000; /* <-- changed card color to black */
       border-radius: 12px;
-      box-shadow: none; /* Remove shadow for seamless look */
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
       transition: transform 0.2s;
     }
 
     .button-card:hover {
-      transform: translateY(-4px); /* subtle GSs hover effect */
+      transform: translateY(-4px);
+      box-shadow: 0 6px 12px rgba(0,0,0,0.15);
     }
 
     .category-button {
-      background-color: #2563eb; /* GSs blue buttons */
+      background-color: #2563eb;
       color: white;
       padding: 25px 40px;
       font-size: 1.5em;
@@ -66,7 +67,7 @@
     }
 
     .category-button:hover {
-      background-color: #1e4db7; /* GSs hover blue */
+      background-color: #1e4db7;
       transform: scale(1.05);
     }
 
@@ -83,7 +84,7 @@
 
     .back-button {
       margin-top: 50px;
-      background-color: #2563eb; /* keep back button blue like GSs buttons */
+      background-color: #2563eb;
       color: white;
       padding: 15px 30px;
       font-size: 1.2em;
