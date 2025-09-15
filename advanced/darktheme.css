@@ -39,11 +39,11 @@ button, .back-button, .back-btn, .category-button {
 
 /* --- Back Buttons --- */
 .back-button, .back-btn {
-    background-color: var(--back-button-bg) !important;
+    background-color: var(#007BFF;) !important;
 }
 
 .back-button:hover, .back-btn:hover {
-    background-color: var(--back-button-hover) !important;
+    background-color: var(#0056b3;) !important;
 }
 
 /* --- Cards --- */
